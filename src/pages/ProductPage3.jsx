@@ -7,24 +7,22 @@ const ProductPage3 = () => {
         <div className="bg-brand-ivory dark:bg-brand-black font-display text-slate-900 dark:text-brand-ivory selection:bg-primary/30 overflow-x-hidden min-h-screen">
             {/* Navigation / Header */}
             <nav className="fixed top-0 w-full z-50 bg-brand-black/80 backdrop-blur-md border-b border-primary/10">
-                <div className="flex items-center justify-between px-6 h-16 max-w-lg mx-auto">
+                <div className="flex items-center justify-between px-6 h-24 max-w-lg mx-auto">
                     <div className="text-primary material-symbols-outlined cursor-pointer">menu</div>
-                    <img src={logo} alt="Bravo Grooming Co." className="h-12 w-auto object-contain" />
+                    <img src={logo} alt="Bravo Grooming Co." className="h-24 w-auto object-contain" />
                     <div className="text-primary material-symbols-outlined cursor-pointer">person</div>
                 </div>
             </nav>
 
             <main className="max-w-lg mx-auto pt-16 pb-24 px-6">
                 {/* Hero Section */}
+                {/* Hero Section */}
                 <section className="py-20 flex flex-col items-center text-center space-y-8">
-                    <div className="w-20 h-20 border-2 border-primary rounded-full flex items-center justify-center mb-4">
-                        <span className="text-primary font-black text-4xl">B</span>
-                    </div>
-                    <h2 className="text-brand-ivory text-4xl font-extrabold leading-tight tracking-tight uppercase">
-                        A New Standard in <span className="text-primary">Beard Care</span> is Coming.
+                    <h2 className="text-brand-ivory font-serif text-4xl font-semibold leading-tight tracking-tight uppercase">
+                        A New <span className="text-primary">Standard</span> in Beard Care Is Coming
                     </h2>
-                    <p className="text-brand-ivory/60 text-xs font-light uppercase tracking-[0.25em] max-w-[280px] leading-relaxed">
-                        Crafted with integrity. Engineered for the modern professional.
+                    <p className="text-primary font-sans text-xs font-semibold uppercase tracking-[0.25em] max-w-[320px] leading-relaxed">
+                        Get first access to limited releases, member-only pricing, and exclusive offers.
                     </p>
                 </section>
 
@@ -33,13 +31,13 @@ const ProductPage3 = () => {
                     <div className="flex flex-col space-y-3">
                         <div className="relative">
                             <input
-                                className="w-full bg-transparent border border-primary/40 rounded text-brand-ivory placeholder:text-brand-ivory/30 py-4 px-4 focus:border-primary focus:ring-0 transition-colors"
+                                className="w-full bg-transparent border border-primary/40 rounded text-brand-ivory font-sans placeholder:text-brand-ivory/30 py-4 px-4 focus:border-primary focus:ring-0 transition-colors"
                                 placeholder="Enter your email"
                                 type="email"
                             />
                         </div>
-                        <button className="w-full bg-primary text-brand-black font-bold py-4 rounded uppercase tracking-widest text-sm hover:bg-primary/90 transition-all active:scale-[0.98]">
-                            Notify Me
+                        <button className="w-full bg-brand-black text-primary border border-primary font-sans font-bold py-4 rounded uppercase tracking-widest text-sm hover:bg-brand-black/80 hover:shadow-[0_0_15px_rgba(189,152,101,0.3)] transition-all active:scale-[0.98]">
+                            Sign Up
                         </button>
                     </div>
                 </section>
@@ -47,63 +45,37 @@ const ProductPage3 = () => {
                 {/* Brand Story */}
                 <section className="mb-24 px-4">
                     <div className="border-l border-primary/30 pl-6 space-y-6">
-                        <h3 className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Our Philosophy</h3>
-                        <p className="text-brand-ivory/80 text-sm leading-loose font-light">
-                            Bravo Grooming Co. was born from a singular obsession: to engineer a grooming ritual that matches the discipline of the modern professional.
-                        </p>
-                        <p className="text-brand-ivory/80 text-sm leading-loose font-light">
-                            No fillers. No compromise. Just high-performance formulas for the discerning man who values precision over hype.
+                        <h3 className="text-primary font-serif text-xl font-bold tracking-[0.4em] uppercase">Craft Over Noise</h3>
+                        <p className="text-brand-ivory font-sans text-sm leading-loose font-light">
+                            The grooming space is crowded with empty claims. Bravo cuts through the noise with precision-engineered formulas that put real performance first. No shortcuts. No compromises. Just results.
                         </p>
                     </div>
                 </section>
 
-                {/* Formula Preview */}
-                <section className="mb-24">
-                    <h3 className="text-center text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-10">Premium Actives</h3>
-                    <div className="grid grid-cols-1 gap-4">
-                        {/* Ingredient Card 1 */}
-                        <div className="border border-primary/20 rounded-lg p-6 bg-primary/5 group hover:border-primary/50 transition-colors">
-                            <div className="flex justify-between items-start mb-4">
-                                <span className="text-primary material-symbols-outlined text-3xl">science</span>
-                                <span className="text-[10px] text-primary/40 font-mono">01</span>
-                            </div>
-                            <h4 className="text-brand-ivory font-bold uppercase tracking-widest text-sm mb-2">Bakuchiol</h4>
-                            <p className="text-brand-ivory/50 text-xs font-light">A plant-based retinol alternative that reinforces the skin barrier without irritation.</p>
-                        </div>
-                        {/* Ingredient Card 2 */}
-                        <div className="border border-primary/20 rounded-lg p-6 bg-primary/5 group hover:border-primary/50 transition-colors">
-                            <div className="flex justify-between items-start mb-4">
-                                <span className="text-primary material-symbols-outlined text-3xl">opacity</span>
-                                <span className="text-[10px] text-primary/40 font-mono">02</span>
-                            </div>
-                            <h4 className="text-brand-ivory font-bold uppercase tracking-widest text-sm mb-2">Squalane</h4>
-                            <p className="text-brand-ivory/50 text-xs font-light">Biomimetic hydration that mimics natural oils for weightless, deep absorption.</p>
-                        </div>
-                        {/* Ingredient Card 3 */}
-                        <div className="border border-primary/20 rounded-lg p-6 bg-primary/5 group hover:border-primary/50 transition-colors">
-                            <div className="flex justify-between items-start mb-4">
-                                <span className="text-primary material-symbols-outlined text-3xl">eco</span>
-                                <span className="text-[10px] text-primary/40 font-mono">03</span>
-                            </div>
-                            <h4 className="text-brand-ivory font-bold uppercase tracking-widest text-sm mb-2">Black Seed Oil</h4>
-                            <p className="text-brand-ivory/50 text-xs font-light">Antique wisdom meets modern science to soothe follicles and promote density.</p>
-                        </div>
-                    </div>
-                </section>
 
-                {/* Visual Teaser */}
-                <section className="mb-24 relative overflow-hidden rounded-xl bg-neutral-900 aspect-[3/4] flex flex-col items-center justify-end p-8">
+
+                {/* The Bravo Boardroom */}
+                <section className="mb-24 relative overflow-hidden rounded-xl bg-neutral-900 aspect-[3/4] flex flex-col items-center justify-center p-8 text-center space-y-8">
                     <div
-                        className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
+                        className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
                         style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAU9yCZmZX663nEhW1cXJ-e0whCxaWriF_UP0gn4qHgOgBBZrDzHY_UICDNRFayDgMaNde8HN075xq81ZRhlZA2kjkrJRCC7l7Y9NLhZfO-JFK8Mqpj5P5NJAid03_kzGIO25weupf9_Rga1m-NVjuYj4djkOJpIwlQey6-g5GhyUABMuVgNH7vjkEUniOKhIXN6Up-3Ol6rVQ7yKojdrA-GnbPNJ7WBPtHW3SJApm3h4ufaa3Zr_zCsZcXKU-LXsXC2H2cZnjmjs4')" }}
                     ></div>
-                    {/* Product Silhouette */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <img src={productImage} alt="Bravo Beard Oil" className="h-64 md:h-80 w-auto object-contain drop-shadow-2xl opacity-90" />
+
+                    {/* Visual Element (Favicon) */}
+                    <div className="relative z-10 p-6 rounded-full border border-primary/20 bg-brand-black/50 backdrop-blur-sm mb-4">
+                        <img src="/favicon.png" alt="Bravo Boardroom" className="w-16 h-16 object-contain" />
                     </div>
-                    <div className="relative text-center space-y-2">
-                        <p className="text-brand-ivory text-lg font-bold">You’ll see it soon.</p>
-                        <p className="text-primary text-sm font-light italic">You’ll feel it even sooner.</p>
+
+                    <div className="relative z-10 space-y-6 max-w-xs">
+                        <h3 className="text-brand-ivory font-serif text-2xl font-bold uppercase tracking-wide">
+                            Introducing <br /><span className="text-primary">The Bravo Boardroom</span>
+                        </h3>
+                        <p className="text-brand-ivory/90 font-sans text-xs leading-relaxed font-light">
+                            Where our most committed customers get a seat at the table. Members receive first-access to limited releases, preferred pricing on select products, and exclusive offers unavailable to the public.
+                        </p>
+                        <button className="border border-primary text-primary font-bold uppercase tracking-widest text-xs py-4 px-8 rounded hover:bg-primary hover:text-brand-black transition-all active:scale-95">
+                            Join the Boardroom
+                        </button>
                     </div>
                 </section>
 
@@ -115,21 +87,6 @@ const ProductPage3 = () => {
                         <span>Small Batch</span>
                         <span className="w-1 h-1 rounded-full bg-primary/30"></span>
                         <span>Derm Tested</span>
-                    </div>
-                </section>
-
-                {/* Secondary CTA */}
-                <section className="mb-24 text-center">
-                    <h3 className="text-brand-ivory text-xl font-bold uppercase tracking-widest mb-8">Join the Bravo Inner Circle</h3>
-                    <div className="flex flex-col space-y-3">
-                        <input
-                            className="w-full bg-transparent border border-primary/40 rounded text-brand-ivory py-4 px-4 focus:border-primary focus:ring-0"
-                            placeholder="Email Address"
-                            type="email"
-                        />
-                        <button className="w-full bg-primary text-brand-black font-bold py-4 rounded uppercase tracking-widest text-sm">
-                            Access Private Launch
-                        </button>
                     </div>
                 </section>
             </main>
