@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #010000;
+  --color-brand-bronze: #BD9865;
+  --color-brand-ivory: #FDF4E9;
+
+  --font-playfair: "Playfair Display", serif;
+  --font-julius: "Julius Sans One", sans-serif;
+
+  /* Custom large spacing for "Massive negative space" */
+  --spacing-32: 8rem;
+  --spacing-40: 10rem;
+  --spacing-48: 12rem;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-ivory font-julius antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-playfair uppercase tracking-widest;
+  }
+}
+
+@layer utilities {
+  .text-brand-gradient {
+    background: linear-gradient(to right, #BD9865, #FDF4E9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
