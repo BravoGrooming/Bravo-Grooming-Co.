@@ -10,11 +10,13 @@ export default {
         'brand-black': '#010000',
         'brand-ivory': '#FDF4E9',
         'brand-bronze': '#BD9865',
+        'primary': '#bd9965', // Added for ProductPage3
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],
         accent: ['"CS Gordon"', 'serif'], // Fallback needed
         sans: ['"Julius Sans One"', 'sans-serif'],
+        display: ['"Manrope"', 'sans-serif'], // Added for ProductPage3
       },
     },
   },
