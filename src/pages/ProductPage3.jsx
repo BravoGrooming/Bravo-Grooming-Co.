@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../assets/logo.png';
-import productImage from '../assets/beard-oil-hero.png';
 
 const ProductPage3 = () => {
     return (

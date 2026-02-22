@@ -32,7 +32,7 @@ const HomePage = () => {
 
                     <div className="flex flex-col md:flex-row gap-6 justify-center pt-8">
                         <Link to="/product" className="bg-brand-bronze text-brand-black px-10 py-4 font-bold tracking-widest uppercase hover:bg-brand-ivory transition-all duration-300">
-                            Shop Collection
+                            Pre-Order Bioactive Oil
                         </Link>
                         <Link to="/signup" className="border border-brand-bronze text-brand-bronze px-10 py-4 font-bold tracking-widest uppercase hover:bg-brand-bronze hover:text-brand-black transition-all duration-300">
                             Join The Club

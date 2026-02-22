@@ -83,12 +83,17 @@ const ProductPage = () => {
                         <p className="flex items-center gap-4"><span className="text-brand-bronze text-xl">✓</span> Prevents Itch & Irritation</p>
                     </div>
 
-                    <button
-                        onClick={addToBag}
-                        className="w-full bg-brand-bronze text-brand-black px-8 py-4 uppercase tracking-widest font-bold hover:bg-brand-ivory transition-colors mt-8"
-                    >
-                        Add to Bag
-                    </button>
+                    <div className="mt-8 space-y-4">
+                        <button
+                            onClick={addToBag}
+                            className="w-full bg-brand-bronze text-brand-black px-8 py-4 uppercase tracking-widest font-bold hover:bg-brand-ivory transition-colors"
+                        >
+                            Pre-Order Now
+                        </button>
+                        <p className="text-center font-julius text-sm opacity-80 text-brand-bronze">
+                            This is a pre-order item. Shipping begins Mid-March.
+                        </p>
+                    </div>
                 </div>
             </div>
 

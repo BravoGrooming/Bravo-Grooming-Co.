@@ -11,23 +11,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Temporary Launch Teaser Route */}
-        <Route path="/" element={<ProductPage3 />} />
-
-        {/* Catch-all redirect to homepage to lock other pages */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-
-        {/* 
-          Disabled Full Site Routing for Launch Teaser
-          To re-enable: Uncomment this block and remove the routes above.
-          
+        {/* Full Site Routing */}
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="product" element={<ProductPage />} />
           <Route path="science-of-bioactive" element={<ScienceOfBioactive />} />
           <Route path="signup" element={<SignupPage />} />
         </Route>
-        */}
       </Routes>
     </Router>
   );
