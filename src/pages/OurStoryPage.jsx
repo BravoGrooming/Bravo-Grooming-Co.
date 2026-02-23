@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import founderImage from '../assets/founder-portrait.png';
+import oilBeakerImage from '../assets/oil-in-beaker.png';
 
 const OurStoryPage = () => {
     return (
@@ -67,39 +68,57 @@ const OurStoryPage = () => {
                 </div>
             </section>
 
-            {/* Section 2.5: The Vision & Execution (New Copy) */}
-            <section className="bg-brand-black border-t border-brand-bronze/10 py-32">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-                        {/* 2. The Vision */}
-                        <div className="space-y-8">
-                            <span className="text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">02 / VISION</span>
-                            <h3 className="text-3xl font-playfair uppercase tracking-widest text-brand-ivory">The Vision</h3>
-                            <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
-                                Our vision is direct — elevate men’s grooming to a level worthy of the men who refuse to cut corners. We create products that match the standards of those who take pride in how they present themselves: premium formulations, purposeful ingredients, and a philosophy rooted in discipline rather than trends.
-                            </p>
-                            <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
-                                We’re building a brand that stands for integrity, precision, and confidence. <br /><br />
-                                <span className="text-brand-bronze italic">Not loud. Not flashy. <br />Just undeniably premium.</span>
-                            </p>
-                        </div>
+            {/* Section 2: The Vision (Staggered Layout) */}
+            <section className="grid grid-cols-1 md:grid-cols-2 bg-brand-black border-t border-brand-bronze/10">
+                {/* Copy Column (Left side) */}
+                <div className="flex flex-col justify-center p-12 md:p-24 border-b md:border-b-0 md:border-r border-brand-bronze/10 order-2 md:order-1">
+                    <span className="mb-4 text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">02 / VISION</span>
+                    <h3 className="mb-12 text-3xl font-playfair uppercase tracking-widest text-brand-ivory">The Vision</h3>
+                    <div className="space-y-8">
+                        <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
+                            Our vision is direct — elevate men’s grooming to a level worthy of the men who refuse to cut corners. We create products that match the standards of those who take pride in how they present themselves: premium formulations, purposeful ingredients, and a philosophy rooted in discipline rather than trends.
+                        </p>
+                        <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
+                            We’re building a brand that stands for integrity, precision, and confidence. <br /><br />
+                            <span className="text-brand-bronze italic">Not loud. Not flashy. <br />Just undeniably premium.</span>
+                        </p>
+                    </div>
+                </div>
+                {/* Image Column (Right side) */}
+                <div className="relative h-[500px] md:h-[600px] lg:h-auto min-h-[500px] w-full overflow-hidden order-1 md:order-2">
+                    <div
+                        className="h-full w-full bg-cover bg-center opacity-90"
+                        style={{ backgroundImage: `url(${oilBeakerImage})` }}
+                    ></div>
+                </div>
+            </section>
 
-                        {/* 3. Execution */}
-                        <div className="space-y-8">
-                            <span className="text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">03 / EXECUTION</span>
-                            <h3 className="text-3xl font-playfair uppercase tracking-widest text-brand-ivory">Execution</h3>
-                            <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
-                                A vision means nothing without disciplined follow-through. Execution is where Bravo separates itself: no gimmicks, no filler ingredients, no shortcuts — just uncompromising craftsmanship engineered to perform.
-                            </p>
-                            <div className="space-y-4 pt-4 border-t border-brand-bronze/20">
-                                <p className="text-sm font-julius uppercase tracking-widest text-brand-ivory"><span className="text-brand-bronze pr-4">✦</span> Every formula is built with intent.</p>
-                                <p className="text-sm font-julius uppercase tracking-widest text-brand-ivory"><span className="text-brand-bronze pr-4">✦</span> Every detail is deliberate.</p>
-                                <p className="text-sm font-julius uppercase tracking-widest text-brand-ivory"><span className="text-brand-bronze pr-4">✦</span> Every product earns its place on your shelf.</p>
-                            </div>
-                            <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80 mt-6 pt-4 border-t border-brand-bronze/20">
-                                This is how we turn standards into results — one premium bottle at a time.
-                            </p>
+            {/* Section 3: Execution (Staggered Layout) */}
+            <section className="grid grid-cols-1 md:grid-cols-2 bg-brand-black border-t border-brand-bronze/10">
+                {/* Image Column (Left side) */}
+                <div className="relative h-[500px] md:h-[600px] lg:h-auto min-h-[500px] w-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-bronze/10">
+                    <div
+                        className="h-full w-full bg-neutral-900 flex items-center justify-center opacity-80"
+                    >
+                        <span className="text-brand-ivory/20 font-julius tracking-widest text-xs uppercase px-8 text-center border border-brand-ivory/10 py-4 rounded">Placeholder for Execution Image</span>
+                    </div>
+                </div>
+                {/* Copy Column (Right side) */}
+                <div className="flex flex-col justify-center p-12 md:p-24">
+                    <span className="mb-4 text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">03 / EXECUTION</span>
+                    <h3 className="mb-12 text-3xl font-playfair uppercase tracking-widest text-brand-ivory">Execution</h3>
+                    <div className="space-y-8">
+                        <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
+                            A vision means nothing without disciplined follow-through. Execution is where Bravo separates itself: no gimmicks, no filler ingredients, no shortcuts — just uncompromising craftsmanship engineered to perform.
+                        </p>
+                        <div className="space-y-4 pt-4 border-t border-brand-bronze/20">
+                            <p className="text-sm font-julius uppercase tracking-widest text-brand-ivory"><span className="text-brand-bronze pr-4">✦</span> Every formula is built with intent.</p>
+                            <p className="text-sm font-julius uppercase tracking-widest text-brand-ivory"><span className="text-brand-bronze pr-4">✦</span> Every detail is deliberate.</p>
+                            <p className="text-sm font-julius uppercase tracking-widest text-brand-ivory"><span className="text-brand-bronze pr-4">✦</span> Every product earns its place on your shelf.</p>
                         </div>
+                        <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80 mt-6 pt-4 border-t border-brand-bronze/20">
+                            This is how we turn standards into results — one premium bottle at a time.
+                        </p>
                     </div>
                 </div>
             </section>
