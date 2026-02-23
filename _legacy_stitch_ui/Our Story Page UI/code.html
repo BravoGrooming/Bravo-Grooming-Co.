@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bravo Our Story Editorial Layout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#bd9965", // Heritage Bronze
+            "background-light": "#f7f7f6",
+            "background-dark": "#010000", // Obsidian Black
+            "ivory": "#FDF4E9",
+            "charcoal": "#1d1a15",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0px", 
+            "lg": "0px", 
+            "xl": "0px", 
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #010000;
+      color: #FDF4E9;
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .letter-spacing-widest {
+      letter-spacing: 0.3em;
+    }
+    .letter-spacing-wide {
+      letter-spacing: 0.15em;
+    }
+    .editorial-grid {
+      border-top: 1px solid rgba(189, 153, 101, 0.3);
+      border-bottom: 1px solid rgba(189, 153, 101, 0.3);
+    }
+    .vertical-divider {
+      border-right: 1px solid rgba(189, 153, 101, 0.3);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-ivory selection:bg-primary selection:text-background-dark">
+<!-- Mobile Wrapper -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation / Header -->
+<header class="fixed top-0 z-50 flex w-full items-center justify-between bg-background-dark/80 px-6 py-6 backdrop-blur-md">
+<div class="flex size-10 items-center justify-start text-ivory">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-xs font-bold tracking-[0.4em] text-primary">BRAVO</span>
+</div>
+<div class="flex size-10 items-center justify-end text-ivory">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative flex h-[85vh] w-full flex-col items-center justify-center pt-20">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="h-full w-full bg-cover bg-center opacity-60 grayscale scale-110" data-alt="Moody high-end grooming vignette with shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdmfZ48EyHMdS-uTXYkn8WifwvSrcCafick8Nh6wObrRJUAIPvmsTS0dUO6GXwuwGwjLkVNTIEUU23JVvAerXDPqiHuPqzU7QdKlV8SeBxGBgX0fS2sP0S-eZ_TOpWFKgO2JQc3KnCXS2Q4g3k4068HvFKvoo8a5PxT4lW1aAeH4VwtpWeS55OZSCgDURLpNwXqpkV42UdQjHBMV5O0Cj8C4fUhF1I1vA-GGz8gE2b47UE59X0Z54TNp453gjyJjzayEdgnARXcrvF');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark via-transparent to-background-dark"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center px-6">
+<h1 class="letter-spacing-widest text-4xl font-extrabold uppercase leading-none md:text-6xl">
+          Our Story
+        </h1>
+<div class="mt-8 h-12 w-[1px] bg-primary"></div>
+<p class="mt-8 max-w-[280px] text-[10px] uppercase tracking-[0.3em] text-primary/80">
+          A disciplined approach to the modern man's ritual
+        </p>
+</div>
+</section>
+<!-- Section 1: Philosophy -->
+<section class="flex flex-col items-center px-8 py-24 text-center">
+<div class="max-w-[320px]">
+<h2 class="letter-spacing-wide mb-10 text-xl font-light leading-relaxed text-ivory">
+          Grooming isn’t just routine. It’s a reset. A moment of clarity in a chaotic world.
+        </h2>
+<div class="mx-auto mb-10 h-[1px] w-12 bg-primary"></div>
+<p class="text-xs font-light uppercase leading-[2.2] tracking-widest text-ivory/60">
+          Every stroke, every drop, a commitment to self-mastery. We believe the morning ritual is the cornerstone of a disciplined life.
+        </p>
+</div>
+</section>
+<!-- Section 2: Founder's Journey (Two Column) -->
+<section class="grid grid-cols-1 md:grid-cols-2">
+<!-- Image Column -->
+<div class="relative h-[500px] w-full bg-charcoal overflow-hidden">
+<div class="h-full w-full bg-cover bg-center grayscale contrast-125" data-alt="High-end silhouette photo in moody lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLlRW9m2VBy4jU2inq8YEZhU2ozpHses33ky1lI5ElcAQ9TYZYX2UAmxnXVVRkqgVyeYEqIstG3yqlOq77h7q22z2QowI8GQBHVN0Cht-ZY46REG-DPBkVTBHWItnmCSXEAhwaXfAAq3nrS2W73H18h3f3zhn_VJ4H8GixCLAzIY1NI-VInOHqHeY2I3JYKr6c5TjwR7aFlnjmat6hSvlnf8efqNRw3N67IzE_M3obEa2hzpCkEjjiYLv3fsk5ify8IW5INTCjD3w3');">
+</div>
+</div>
+<!-- Copy Column -->
+<div class="flex flex-col justify-center bg-background-dark p-10 py-20">
+<span class="mb-4 text-[10px] font-bold tracking-[0.5em] text-primary">01 / ORIGIN</span>
+<h3 class="mb-8 text-2xl font-light uppercase tracking-widest text-ivory">The Vision</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="mt-1 h-[6px] w-[6px] flex-shrink-0 bg-primary"></span>
+<p class="text-xs font-light leading-relaxed tracking-widest text-ivory/80">
+              Like a lot of men, our founder realized that modern convenience had stripped away the intentionality of grooming. 
+            </p>
+</div>
+<div class="flex gap-4">
+<span class="mt-1 h-[6px] w-[6px] flex-shrink-0 bg-primary"></span>
+<p class="text-xs font-light leading-relaxed tracking-widest text-ivory/80">
+              He sought to restore the heritage of the barbershop into the privacy of the home—creating products that demand respect.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Discipline (Pull Quote) -->
+<section class="bg-charcoal flex flex-col items-center justify-center px-8 py-32 text-center">
+<div class="max-w-xl">
+<span class="material-symbols-outlined mb-8 text-primary/40 text-4xl">format_quote</span>
+<h2 class="text-3xl font-light italic leading-snug text-primary md:text-4xl">
+          Grooming became more than self-care. <br/>It became a form of discipline.
+        </h2>
+<div class="mt-12 flex items-center justify-center gap-4">
+<div class="h-[1px] w-8 bg-primary/30"></div>
+<span class="text-[10px] uppercase tracking-[0.4em] text-primary/60">The Bravo Credo</span>
+<div class="h-[1px] w-8 bg-primary/30"></div>
+</div>
+</div>
+</section>
+<!-- Section 4: The Bravo Standard (Grid) -->
+<section class="bg-background-dark py-24">
+<div class="px-8 mb-16">
+<h3 class="letter-spacing-widest text-center text-xs font-bold uppercase text-ivory">The Bravo Standard</h3>
+</div>
+<div class="grid grid-cols-2 border-y border-primary/20">
+<div class="flex flex-col border-r border-primary/20 p-8">
+<div class="mb-10 aspect-square w-full overflow-hidden bg-charcoal">
+<div class="h-full w-full bg-cover bg-center grayscale opacity-80" data-alt="Premium cold-pressed grooming oils" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTNUFMCeopvThYCZSYfHqZOYEy6BkkjCs4oVWFspKbQ5nCStbqrWpW1LA8FzU33YD0ngd79My6VPgS462HW3aryo0lhOVppZT9FHEqcPiLLedl73-EoPT22Nz_0VO7c4K7j5YQ0H7KiGa3VPa8H_xk6stUIDswqh_g7HlpaV2HbtD6zp0Imq15mx1MkFga8AZT6NA_x13TOi0WOeK7NUQtRvSx5mhRjqiNR94kvCxJQc8-W69WGDbiq2BUkuGukGVyxRoL3zqSpjPG');"></div>
+</div>
+<h4 class="mb-4 text-[10px] font-bold tracking-widest text-primary uppercase">Ingredients</h4>
+<p class="text-[9px] uppercase leading-relaxed tracking-widest text-ivory/60">Premium cold-pressed oils sourced from sustainable heritage groves.</p>
+</div>
+<div class="flex flex-col p-8">
+<div class="mb-10 aspect-square w-full overflow-hidden bg-charcoal">
+<div class="h-full w-full bg-cover bg-center grayscale opacity-80" data-alt="Professional barber tools in grid" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIk9lLnvEpF09Zo3QfcUi7D4JeugAHVD0CrBu5xOkpAnwZp3GCKEqerjwleLJfokWXQKGr5cK5ymFUfj6eLDbtUpvD2TliGeO6OcvRgvFYWhkArjhZUv0QZhVne91hugjdzP3C1o7uIWHMA2E1O5Cc64mWEmzA5kn0B0O8pLN8M7xLHKl0KveeULOF0wauqp5l0YVr3scCVDHyJCHhDWtvAs2yb_Q1yUBhUPwRU9hVF2LGhf9JSNhiCqclTbLVkQLCKS0vjrSrpklM');"></div>
+</div>
+<h4 class="mb-4 text-[10px] font-bold tracking-widest text-primary uppercase">Craft</h4>
+<p class="text-[9px] uppercase leading-relaxed tracking-widest text-ivory/60">Small batch production ensuring uncompromising quality in every bottle.</p>
+</div>
+<div class="flex flex-col border-t border-r border-primary/20 p-8">
+<h4 class="mb-4 text-[10px] font-bold tracking-widest text-primary uppercase">Scent</h4>
+<p class="text-[9px] uppercase leading-relaxed tracking-widest text-ivory/60">Architectural fragrance profiles: Sandalwood, Bergamot, and Obsidian Smoke.</p>
+</div>
+<div class="flex flex-col border-t border-primary/20 p-8">
+<h4 class="mb-4 text-[10px] font-bold tracking-widest text-primary uppercase">Result</h4>
+<p class="text-[9px] uppercase leading-relaxed tracking-widest text-ivory/60">A superior finish that lasts from the morning ritual to the midnight hour.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Closing -->
+<section class="flex flex-col items-center bg-background-dark px-8 py-40 text-center">
+<!-- Emblem -->
+<div class="mb-12 flex h-16 w-16 items-center justify-center border border-primary/40 rotate-45">
+<span class="material-symbols-outlined -rotate-45 text-3xl text-primary font-light">token</span>
+</div>
+<div class="max-w-[280px]">
+<h2 class="letter-spacing-wide mb-8 text-2xl font-light text-ivory">Welcome to <br/>Bravo Grooming Co.</h2>
+<p class="text-[10px] uppercase leading-loose tracking-[0.3em] text-ivory/40">
+          The ritual begins with you.
+        </p>
+</div>
+<button class="mt-16 border border-primary px-10 py-4 text-[10px] font-bold uppercase tracking-[0.4em] text-primary hover:bg-primary hover:text-background-dark transition-colors">
+        Explore The Collection
+      </button>
+</section>
+<!-- Bottom Navigation Bar Component -->
+<nav class="sticky bottom-0 z-50 flex items-center justify-around border-t border-primary/20 bg-background-dark/95 px-4 py-4 backdrop-blur-md">
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-ivory/40" href="#">
+<span class="material-symbols-outlined text-2xl">search</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-ivory/40" href="#">
+<span class="material-symbols-outlined text-2xl">grid_view</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-ivory/40" href="#">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-ivory/40" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+</a>
+</nav>
+</div>
+</body></html>

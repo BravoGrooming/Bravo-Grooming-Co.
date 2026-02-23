@@ -16,10 +16,10 @@ const NavBar = () => {
                         <img src={logo} alt="Bravo Grooming Co." className="h-16 md:h-20 w-auto object-contain transition-all" />
                     </Link>
 
-                    {/* Navigation - Hidden on mobile, visible and aligned left on desktop */}
                     <div className="hidden md:flex items-center gap-8 lg:gap-12 ml-8 lg:ml-16 font-julius text-brand-ivory text-sm tracking-[0.2em] font-bold uppercase whitespace-nowrap">
+                        <Link to="/our-story" className="hover:text-brand-bronze transition-colors">Our Story</Link>
                         <Link to="/product" className="hover:text-brand-bronze transition-colors">Shop</Link>
-                        <Link to="/science-of-bioactive" className="hover:text-brand-bronze transition-colors">Science of Bioactive</Link>
+                        <Link to="/science-of-bioactive" className="hover:text-brand-bronze transition-colors">Science</Link>
                         <Link to="/signup" className="hover:text-brand-bronze transition-colors">Join</Link>
                     </div>
 

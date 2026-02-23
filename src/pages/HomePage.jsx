@@ -34,9 +34,6 @@ const HomePage = () => {
                         <Link to="/product" className="bg-brand-bronze text-brand-black px-10 py-4 font-bold tracking-widest uppercase hover:bg-brand-ivory transition-all duration-300">
                             Pre-Order Bioactive Oil
                         </Link>
-                        <Link to="/signup" className="border border-brand-bronze text-brand-bronze px-10 py-4 font-bold tracking-widest uppercase hover:bg-brand-bronze hover:text-brand-black transition-all duration-300">
-                            Join The Club
-                        </Link>
                     </div>
                 </div>
             </section>
@@ -51,11 +48,11 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="md:w-1/2 space-y-6 text-center md:text-left">
-                        <h2 className="text-4xl font-playfair text-brand-ivory">Built from Struggle. <br /><span className="text-brand-bronze">Refined with Purpose.</span></h2>
+                        <h2 className="text-4xl font-playfair text-brand-ivory">Forged Through Discipline. <br /><span className="text-brand-bronze">Elevated With Purpose.</span></h2>
                         <p className="text-lg opacity-80 leading-relaxed font-julius max-w-lg">
-                            We don’t chase trends — we set standards. Bravo was forged through discipline, not hype, and every bottle of our Bioactive Beard Oil reflects that. No filler oils. No shortcuts. Just high-performance ingredients engineered for men who demand results. This is grooming with intention… built for the professional who holds himself to a higher code.
+                            We don’t follow the industry — we refine it. Bravo was built on discipline, consistency, and a commitment to doing things the right way, not the easy way. Every bottle of our Bioactive Beard Oil reflects that standard. No filler. No compromises. Only proven, high-performance ingredients designed for men who expect real results. This is grooming with purpose — crafted for the professional who holds himself to a higher code.
                         </p>
-                        <Link to="/product" className="inline-block text-brand-bronze border-b border-brand-bronze pb-1 hover:text-brand-ivory hover:border-brand-ivory transition-colors uppercase tracking-widest text-xs">
+                        <Link to="/our-story" className="inline-block text-brand-bronze border-b border-brand-bronze pb-1 hover:text-brand-ivory hover:border-brand-ivory transition-colors uppercase tracking-widest text-xs">
                             Read Our Story
                         </Link>
                     </div>
@@ -186,13 +183,24 @@ const HomePage = () => {
                 <h2 className="text-xs uppercase tracking-[0.4em] text-brand-bronze mb-16">Trusted by 10,000+ Men</h2>
                 <div className="relative">
                     <div className="flex gap-8 justify-center flex-wrap">
-                        {[1, 2, 3].map((i) => (
-                            <div key={i} className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all">
-                                <div className="flex text-brand-bronze text-sm">★★★★★</div>
-                                <p className="font-playfair italic opacity-90">"Absolutely enhanced my daily routine. The scent is subtle but commanding."</p>
-                                <p className="text-xs uppercase tracking-wider opacity-50">— Verified Customer</p>
-                            </div>
-                        ))}
+                        {/* Testimonial 1 */}
+                        <div className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all flex-1 min-w-[300px]">
+                            <div className="flex text-brand-bronze text-sm">★★★★★</div>
+                            <p className="font-playfair italic opacity-90">"I’m picky with ingredients because my skin is super sensitive. No issues here. My beard looks fuller and feels softer, but the biggest change is the skin underneath. No redness, no flakes, nothing. My beard just feels healthier overall."</p>
+                            <p className="text-xs uppercase tracking-wider opacity-50">— Miguel A., 26 — Software Engineer</p>
+                        </div>
+                        {/* Testimonial 2 */}
+                        <div className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all flex-1 min-w-[300px]">
+                            <div className="flex text-brand-bronze text-sm">★★★★★</div>
+                            <p className="font-playfair italic opacity-90">"My beard is mostly grey now and gets wiry. This stuff actually tamed it without feeling like a balm. The hydration is noticeable. Took maybe three days for the rough patches to smooth out. I’ve used a lot of ‘premium’ oils over the years… this one earns the label."</p>
+                            <p className="text-xs uppercase tracking-wider opacity-50">— Terrence L., 54 — Small Business Owner</p>
+                        </div>
+                        {/* Testimonial 3 */}
+                        <div className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all flex-1 min-w-[300px]">
+                            <div className="flex text-brand-bronze text-sm">★★★★★</div>
+                            <p className="font-playfair italic opacity-90">"I meet clients face-to-face all day, so looking put together matters. This oil makes my beard look controlled without looking like I tried too hard. The scent is classy and subtle, which is important to me. What stood out most was how much healthier the skin under my beard feels. My barber even asked what I've been using."</p>
+                            <p className="text-xs uppercase tracking-wider opacity-50">— Daniel K., 45 — Realtor</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -200,8 +208,8 @@ const HomePage = () => {
             {/* 7. Email Capture */}
             <section className="py-32 bg-brand-black text-center">
                 <div className="container mx-auto px-4 max-w-2xl">
-                    <h2 className="text-5xl font-playfair mb-6">Join the <span className="text-brand-bronze">Inner Circle</span></h2>
-                    <p className="text-lg opacity-60 mb-12 font-julius">Exclusive access to limited batches and grooming insights.</p>
+                    <h2 className="text-5xl font-playfair mb-6">Join The <span className="text-brand-bronze">Bravo Boardroom</span></h2>
+                    <p className="text-lg opacity-60 mb-12 font-julius">Join the Bravo Boardroom to unlock premium updates, limited-time opportunities, and elevated pricing benefits available only to our members.</p>
                     <form className="flex flex-col md:flex-row gap-0 max-w-md mx-auto relative">
                         <input
                             type="email"
