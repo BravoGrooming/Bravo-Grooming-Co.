@@ -5,9 +5,9 @@ import Reveal from '../components/Reveal';
 
 const HomePage = () => {
     // Determine unique ingredients across all 3 columns
-    const ingredientsC1 = ["Meadowfoam Seed Oil", "Jojoba Oil", "Argan Oil", "Baobab Oil", "Vitamin E (Tocopherol)"];
+    const ingredientsC1 = ["Jojoba Oil", "Argan Oil", "Baobab Oil"];
     const ingredientsC2 = ["Marula Oil", "Plant-Derived Squalane", "Moringa Oil", "Sea Buckthorn Berry Oil", "Bakuchiol"];
-    const ingredientsC3 = ["Castor Oil", "Jojoba Oil", "Plant-Derived Squalane"];
+    const ingredientsC3 = ["Castor Oil", "Jojoba Oil", "Plant-Derived Squalane", "Meadowfoam Seed Oil", "Vitamin E (Tocopherol)"];
 
     const seen = new Set();
     const uniqueC1 = ingredientsC1.filter(item => { if (seen.has(item)) return false; seen.add(item); return true; });
@@ -24,7 +24,9 @@ const HomePage = () => {
                         autoPlay
                         loop
                         muted
+                        defaultMuted
                         playsInline
+                        controls={false}
                         className="w-full h-full object-cover"
                     >
                         <source src={heroVideo} type="video/mp4" />
@@ -143,8 +145,10 @@ const HomePage = () => {
                             The Bioactive <span className="text-brand-bronze">Edge</span>
                         </h2>
                         <div className="w-24 h-px bg-brand-bronze mx-auto opacity-60"></div>
+                        <p className="font-julius text-sm md:text-base leading-relaxed opacity-80 text-brand-ivory/80 uppercase tracking-widest text-brand-bronze mb-4">Precision Formulation. Clinical Results.</p>
                         <p className="font-julius text-sm md:text-base leading-relaxed opacity-80 text-brand-ivory/80">
-                            Elite grooming isn’t built on trends — it’s built on formulation. Our beard oil uses clinically aligned bioactives that improve both the beard and the skin beneath it. Because real results don’t come from hype… they come from chemistry, discipline, and precision.
+                            Elite grooming is not a matter of trend; it is a matter of molecular discipline. While others rely on "scent-first" marketing, Bravo Grooming Co. prioritizes the Bioactive Edge—a formulation engineered to bridge the gap between cosmetic appearance and cellular health.<br /><br />
+                            Real results are not found in hype. They are found in the chemistry of the transition from skin to strand.
                         </p>
                     </div>
 
@@ -154,9 +158,9 @@ const HomePage = () => {
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">01</span>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide">Targets the Skin–Beard Barrier</h3>
+                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide uppercase">INTEGRITY OF THE SKIN-BEARD BARRIER</h3>
                             <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                Your beard is only as strong as the skin supporting it. Our actives rebuild, replenish, and restore at the foundation.
+                                A beard is only as formidable as the foundation that supports it. Our bioactive compounds are selected for their ability to penetrate the epidermal layer, reinforcing the skin-beard barrier. We don’t just coat the hair; we rebuild and restore the environment where growth begins.
                             </p>
                         </Reveal>
 
@@ -165,9 +169,9 @@ const HomePage = () => {
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">02</span>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide">Drives Real, Measurable Improvement</h3>
+                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide uppercase">QUANTIFIABLE STRUCTURAL ADVANCEMENT</h3>
                             <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                Not cosmetic shine. Real changes: resilience, softness, density, and reduced breakage.
+                                We have moved beyond "cosmetic shine." Our Bioactive Beard Oil is designed for measurable resilience. By targeting the lipid structure of the follicle, the formula enhances fiber density, maximizes natural softness, and significantly reduces structural breakage.
                             </p>
                         </Reveal>
 
@@ -176,9 +180,9 @@ const HomePage = () => {
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">03</span>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide">Engineered for Professional Daily Performance</h3>
+                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide uppercase">PROFESSIONAL KINETIC PERFORMANCE</h3>
                             <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                Lightweight, fast-absorbing, and clean — built to elevate your routine without slowing you down.
+                                True luxury is frictionless. Engineered for the man whose time is a finite resource, our oil is lightweight and instantly absorbed. It provides a clean, matte-satin finish that integrates into a high-performance routine without residue or hesitation.
                             </p>
                         </Reveal>
                     </div>
