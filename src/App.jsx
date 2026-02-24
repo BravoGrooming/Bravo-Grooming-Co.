@@ -6,6 +6,7 @@ import SignupPage from './pages/SignupPage';
 import ScienceOfBioactive from './pages/ScienceOfBioactive';
 import ProductPage3 from './pages/ProductPage3';
 import OurStoryPage from './pages/OurStoryPage';
+import RitualPage from './pages/RitualPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="product" element={<ProductPage />} />
+          <Route path="ritual" element={<RitualPage />} />
           <Route path="our-story" element={<OurStoryPage />} />
           <Route path="science-of-bioactive" element={<ScienceOfBioactive />} />
           <Route path="signup" element={<SignupPage />} />

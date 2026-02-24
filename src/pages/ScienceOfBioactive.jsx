@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/science-hero.png';
+import Reveal from '../components/Reveal';
 
 const ScienceOfBioactive = () => {
     return (
@@ -30,7 +31,7 @@ const ScienceOfBioactive = () => {
             </section>
 
             {/* Definition Section */}
-            <section className="px-6 py-24 border-t border-brand-bronze/10">
+            <Reveal className="px-6 py-24 border-t border-brand-bronze/10">
                 <div className="container mx-auto max-w-4xl">
                     <div className="mb-16 text-center md:text-left">
                         <h2 className="text-2xl font-playfair mb-4 tracking-wide uppercase text-brand-ivory">Bioactive Isn’t a Buzzword</h2>
@@ -61,10 +62,10 @@ const ScienceOfBioactive = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Ingredient Clusters */}
-            <section className="px-6 py-24 bg-brand-ivory/5">
+            <Reveal delay={200} className="px-6 py-24 bg-brand-ivory/5">
                 <div className="container mx-auto max-w-5xl">
                     <h2 className="text-xs tracking-[0.3em] uppercase text-brand-bronze mb-16 text-center">Formulation Anatomy</h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -111,10 +112,10 @@ const ScienceOfBioactive = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Comparison Table */}
-            <section className="px-6 py-24 container mx-auto max-w-3xl">
+            <Reveal delay={200} className="px-6 py-24 container mx-auto max-w-3xl">
                 <h2 className="text-3xl font-playfair mb-12 tracking-wide text-center uppercase">The Bioactive Difference</h2>
                 <div className="border border-brand-bronze/30">
                     <div className="grid grid-cols-2 bg-brand-bronze/10 border-b border-brand-bronze/30">
@@ -134,10 +135,10 @@ const ScienceOfBioactive = () => {
                         <div className="p-8 text-sm text-brand-ivory">Long-term Follicular Health</div>
                     </div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Regenerative Effect */}
-            <section className="px-6 py-24 bg-brand-ivory/5">
+            <Reveal delay={200} className="px-6 py-24 bg-brand-ivory/5">
                 <div className="container mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-playfair mb-4 uppercase tracking-widest">Regenerative Cycle</h2>
@@ -162,10 +163,10 @@ const ScienceOfBioactive = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* CTA Section */}
-            <section className="px-6 py-32 text-center bg-brand-black container mx-auto">
+            <Reveal delay={200} className="px-6 py-32 text-center bg-brand-black container mx-auto">
                 <div className="max-w-2xl mx-auto border border-brand-bronze/20 p-12">
                     <h3 className="text-xs tracking-[0.4em] uppercase text-brand-bronze mb-8">Ready for the Evolution?</h3>
                     <p className="text-3xl font-playfair mb-12 uppercase">Experience the science of <br /> bioactive grooming.</p>
@@ -176,7 +177,7 @@ const ScienceOfBioactive = () => {
                 <div className="mt-24 pt-12 border-t border-brand-bronze/10">
                     <p className="text-[10px] tracking-widest text-brand-ivory/30 uppercase">© 2024 Bravo Grooming Supply • Molecular Division</p>
                 </div>
-            </section>
+            </Reveal>
         </div>
     );
 };

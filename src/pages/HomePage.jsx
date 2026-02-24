@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom';
 import heroVideo from '../assets/hero-video.mp4';
 import beardOil1 from '../assets/beard-oil-1.png';
+import Reveal from '../components/Reveal';
 
 const HomePage = () => {
+    // Determine unique ingredients across all 3 columns
+    const ingredientsC1 = ["Meadowfoam Seed Oil", "Jojoba Oil", "Argan Oil", "Baobab Oil", "Vitamin E (Tocopherol)"];
+    const ingredientsC2 = ["Marula Oil", "Plant-Derived Squalane", "Moringa Oil", "Sea Buckthorn Berry Oil", "Bakuchiol"];
+    const ingredientsC3 = ["Castor Oil", "Jojoba Oil", "Plant-Derived Squalane"];
+
+    const seen = new Set();
+    const uniqueC1 = ingredientsC1.filter(item => { if (seen.has(item)) return false; seen.add(item); return true; });
+    const uniqueC2 = ingredientsC2.filter(item => { if (seen.has(item)) return false; seen.add(item); return true; });
+    const uniqueC3 = ingredientsC3.filter(item => { if (seen.has(item)) return false; seen.add(item); return true; });
+
     return (
         <div className="flex flex-col w-full">
             {/* 1. Hero Section: Full-width cinematic */}
@@ -22,7 +33,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 text-center max-w-4xl px-4 space-y-8">
+                <Reveal delay={200} className="relative z-10 text-center max-w-4xl px-4 space-y-8 mt-20">
                     <p className="text-brand-bronze tracking-[0.3em] font-julius text-sm uppercase">Precision-Crafted. Results-Driven.</p>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair text-brand-ivory leading-none tracking-widest drop-shadow-lg uppercase">
                         Premium Grooming <br />
@@ -35,19 +46,19 @@ const HomePage = () => {
                             Pre-Order Bioactive Oil
                         </Link>
                     </div>
-                </div>
+                </Reveal>
             </section>
 
             {/* 2. Brand Story Strip */}
-            <section className="py-24 bg-brand-black border-y border-brand-bronze/10">
+            <section className="py-24 bg-brand-black border-y border-brand-bronze/10 overflow-hidden">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                    <div className="md:w-1/2 relative">
+                    <Reveal className="md:w-1/2 relative">
                         <div className="aspect-[4/3] bg-brand-bronze/5 w-full relative overflow-hidden">
                             <img src={beardOil1} alt="Bioactive Science" className="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700 grayscale" />
                             <div className="absolute inset-0 border border-brand-bronze/20 m-4"></div>
                         </div>
-                    </div>
-                    <div className="md:w-1/2 space-y-6 text-center md:text-left">
+                    </Reveal>
+                    <Reveal delay={200} className="md:w-1/2 space-y-6 text-center md:text-left">
                         <h2 className="text-4xl font-playfair text-brand-ivory">Forged Through Discipline. <br /><span className="text-brand-bronze">Elevated With Purpose.</span></h2>
                         <p className="text-lg opacity-80 leading-relaxed font-julius max-w-lg">
                             We don’t follow the industry — we refine it. Bravo was built on discipline, consistency, and a commitment to doing things the right way, not the easy way. Every bottle of our Bioactive Beard Oil reflects that standard. No filler. No compromises. Only proven, high-performance ingredients designed for men who expect real results. This is grooming with purpose — crafted for the professional who holds himself to a higher code.
@@ -55,7 +66,7 @@ const HomePage = () => {
                         <Link to="/our-story" className="inline-block text-brand-bronze border-b border-brand-bronze pb-1 hover:text-brand-ivory hover:border-brand-ivory transition-colors uppercase tracking-widest text-xs">
                             Read Our Story
                         </Link>
-                    </div>
+                    </Reveal>
                 </div>
             </section>
 
@@ -68,13 +79,13 @@ const HomePage = () => {
                         { title: "Professional Brand", desc: "Scent profiles designed for the boardroom, not the bar." },
                         { title: "Transparent Quality", desc: "What you see on the label is exactly what you get." }
                     ].map((item, idx) => (
-                        <div key={idx} className="space-y-4 group">
+                        <Reveal key={idx} delay={idx * 150} className="space-y-4 group">
                             <div className="w-16 h-16 mx-auto border border-brand-bronze rounded-full flex items-center justify-center group-hover:bg-brand-bronze/10 transition-colors">
                                 <div className="w-2 h-2 bg-brand-bronze rotate-45"></div>
                             </div>
                             <h3 className="text-xl font-playfair text-brand-ivory">{item.title}</h3>
                             <p className="text-sm opacity-60 max-w-xs mx-auto">{item.desc}</p>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
             </section>
@@ -93,11 +104,9 @@ const HomePage = () => {
                             <h3 className="text-2xl font-playfair text-brand-bronze uppercase tracking-wide">Nourish + Strengthen</h3>
 
                             <ul className="space-y-4 text-sm font-julius uppercase tracking-wider text-brand-ivory/90">
-                                <li>Meadowfoam Seed Oil</li>
-                                <li>Jojoba Oil</li>
-                                <li>Argan Oil</li>
-                                <li>Baobab Oil</li>
-                                <li>Vitamin E (Tocopherol)</li>
+                                {uniqueC1.map((ingredient, idx) => (
+                                    <li key={idx}>{ingredient}</li>
+                                ))}
                             </ul>
                         </div>
 
@@ -106,11 +115,9 @@ const HomePage = () => {
                             <h3 className="text-2xl font-playfair text-brand-bronze uppercase tracking-wide">Restore + Regenerative</h3>
 
                             <ul className="space-y-4 text-sm font-julius uppercase tracking-wider text-brand-ivory/90">
-                                <li>Marula Oil</li>
-                                <li>Plant-Derived Squalane</li>
-                                <li>Moringa Oil</li>
-                                <li>Sea Buckthorn Berry Oil</li>
-                                <li>Bakuchiol</li>
+                                {uniqueC2.map((ingredient, idx) => (
+                                    <li key={idx}>{ingredient}</li>
+                                ))}
                             </ul>
                         </div>
 
@@ -119,9 +126,9 @@ const HomePage = () => {
                             <h3 className="text-2xl font-playfair text-brand-bronze uppercase tracking-wide">Protect + Condition</h3>
 
                             <ul className="space-y-4 text-sm font-julius uppercase tracking-wider text-brand-ivory/90">
-                                <li>Castor Oil</li>
-                                <li>Jojoba Oil</li>
-                                <li>Plant-Derived Squalane</li>
+                                {uniqueC3.map((ingredient, idx) => (
+                                    <li key={idx}>{ingredient}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
@@ -143,7 +150,7 @@ const HomePage = () => {
 
                     <div className="grid md:grid-cols-3 gap-12">
                         {/* Pillar 1 */}
-                        <div className="group p-8 border border-brand-bronze/10 hover:border-brand-bronze/30 transition-all duration-500 bg-brand-ivory/[0.02]">
+                        <Reveal delay={100} className="group p-8 border border-brand-bronze/10 hover:border-brand-bronze/30 transition-all duration-500 bg-brand-ivory/[0.02]">
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">01</span>
                             </div>
@@ -151,10 +158,10 @@ const HomePage = () => {
                             <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
                                 Your beard is only as strong as the skin supporting it. Our actives rebuild, replenish, and restore at the foundation.
                             </p>
-                        </div>
+                        </Reveal>
 
                         {/* Pillar 2 */}
-                        <div className="group p-8 border border-brand-bronze/10 hover:border-brand-bronze/30 transition-all duration-500 bg-brand-ivory/[0.02]">
+                        <Reveal delay={300} className="group p-8 border border-brand-bronze/10 hover:border-brand-bronze/30 transition-all duration-500 bg-brand-ivory/[0.02]">
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">02</span>
                             </div>
@@ -162,10 +169,10 @@ const HomePage = () => {
                             <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
                                 Not cosmetic shine. Real changes: resilience, softness, density, and reduced breakage.
                             </p>
-                        </div>
+                        </Reveal>
 
                         {/* Pillar 3 */}
-                        <div className="group p-8 border border-brand-bronze/10 hover:border-brand-bronze/30 transition-all duration-500 bg-brand-ivory/[0.02]">
+                        <Reveal delay={500} className="group p-8 border border-brand-bronze/10 hover:border-brand-bronze/30 transition-all duration-500 bg-brand-ivory/[0.02]">
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">03</span>
                             </div>
@@ -173,14 +180,14 @@ const HomePage = () => {
                             <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
                                 Lightweight, fast-absorbing, and clean — built to elevate your routine without slowing you down.
                             </p>
-                        </div>
+                        </Reveal>
                     </div>
                 </div>
             </section>
 
             {/* 6. Social Proof Wall */}
             <section className="py-32 container mx-auto px-4 text-center overflow-hidden">
-                <h2 className="text-xs uppercase tracking-[0.4em] text-brand-bronze mb-16">Trusted by 10,000+ Men</h2>
+                <h2 className="text-xs uppercase tracking-[0.4em] text-brand-bronze mb-16">Proven by the Pursuit of Excellence</h2>
                 <div className="relative">
                     <div className="flex gap-8 justify-center flex-wrap">
                         {/* Testimonial 1 */}

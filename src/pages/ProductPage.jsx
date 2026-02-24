@@ -4,10 +4,12 @@ import heroImage from '../assets/beard-oil-hero.png';
 import textureImage from '../assets/beard-oil-2.png';
 import ProductAccordions from '../components/ProductAccordions';
 import ExpertSocialProof from '../components/ExpertSocialProof';
+import Reveal from '../components/Reveal';
 
 const ProductPage = () => {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [activeImage, setActiveImage] = useState(null);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -15,6 +17,7 @@ const ProductPage = () => {
                 // Fetch product by handle found in previous step: 'premium-beard-oil'
                 const fetchedProduct = await client.product.fetchByHandle('premium-beard-oil');
                 setProduct(fetchedProduct);
+                setActiveImage(fetchedProduct.images[0]?.src || heroImage);
                 setLoading(false);
             } catch (error) {
                 console.error("Error fetching product:", error);
@@ -50,18 +53,33 @@ const ProductPage = () => {
     return (
         <div className="py-12 space-y-24">
             {/* Hero Split */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <Reveal className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-4">
                     <img
-                        src={product.images[0]?.src || heroImage}
+                        src={activeImage || heroImage}
                         alt={product.title}
-                        className="w-full h-auto object-cover rounded-sm border border-brand-bronze/20"
+                        className="w-full h-auto object-cover rounded-sm border border-brand-bronze/20 transition-all duration-300"
                     />
                     <div className="grid grid-cols-3 gap-2">
                         {/* Gallery Thumbs */}
-                        <img src={product.images[0]?.src || heroImage} alt="Detail 1" className="w-full h-32 object-cover opacity-70 hover:opacity-100 cursor-pointer border border-transparent hover:border-brand-bronze/50 transition-all" />
-                        <img src={textureImage} alt="Texture Shot" className="w-full h-32 object-cover opacity-70 hover:opacity-100 cursor-pointer border border-transparent hover:border-brand-bronze/50 transition-all" />
-                        <img src={product.images[1]?.src || heroImage} alt="Detail 3" className="w-full h-32 object-cover opacity-70 hover:opacity-100 cursor-pointer border border-transparent hover:border-brand-bronze/50 transition-all" />
+                        <img
+                            src={product.images[0]?.src || heroImage}
+                            onClick={() => setActiveImage(product.images[0]?.src || heroImage)}
+                            alt="Detail 1"
+                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === (product.images[0]?.src || heroImage) ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
+                        />
+                        <img
+                            src={textureImage}
+                            onClick={() => setActiveImage(textureImage)}
+                            alt="Texture Shot"
+                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === textureImage ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
+                        />
+                        <img
+                            src={product.images[1]?.src || heroImage}
+                            onClick={() => setActiveImage(product.images[1]?.src || heroImage)}
+                            alt="Detail 3"
+                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === (product.images[1]?.src || heroImage) ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
+                        />
                     </div>
                 </div>
 
@@ -95,13 +113,13 @@ const ProductPage = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Reveal>
 
             {/* Accordions Section */}
             <ProductAccordions />
 
             {/* Founder's Note */}
-            <div className="bg-brand-ivory/5 p-12 md:p-24 text-center border border-brand-bronze/10 relative overflow-hidden">
+            <Reveal delay={200} className="bg-brand-ivory/5 p-12 md:p-24 text-center border border-brand-bronze/10 relative overflow-hidden">
                 <div className="absolute top-0 left-0 text-[10rem] font-serif text-brand-bronze opacity-5 leading-none">“</div>
                 <div className="relative z-10 max-w-2xl mx-auto space-y-8">
                     <h2 className="text-3xl font-playfair uppercase tracking-widest text-brand-bronze">Uncompromised Standards</h2>
@@ -111,13 +129,13 @@ const ProductPage = () => {
                     <div className="w-24 h-px bg-brand-bronze mx-auto"></div>
                     <p className="font-playfair italic text-sm opacity-60">Brandt Bravo, Founder</p>
                 </div>
-            </div>
+            </Reveal>
 
             {/* Expert Social Proof */}
             <ExpertSocialProof />
 
             {/* Texture & Sensory Section */}
-            <div className="grid md:grid-cols-2 gap-0 border border-brand-bronze/10">
+            <Reveal delay={200} className="grid md:grid-cols-2 gap-0 border border-brand-bronze/10">
                 <div className="h-[500px] relative">
                     <img src={textureImage} alt="Texture and Viscosity" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-brand-black/20"></div>
@@ -137,7 +155,7 @@ const ProductPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Reveal>
         </div>
     );
 };

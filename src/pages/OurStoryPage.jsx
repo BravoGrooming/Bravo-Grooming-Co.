@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import founderImage from '../assets/founder-portrait.png';
 import oilBeakerImage from '../assets/oil-in-beaker.png';
+import Reveal from '../components/Reveal';
 
 const OurStoryPage = () => {
     return (
@@ -26,7 +27,7 @@ const OurStoryPage = () => {
             </section>
 
             {/* Section 1: Philosophy */}
-            <section className="flex flex-col items-center px-8 py-32 text-center border-y border-brand-bronze/10">
+            <Reveal className="flex flex-col items-center px-8 py-32 text-center border-y border-brand-bronze/10">
                 <div className="max-w-xl">
                     <h2 className="tracking-wide mb-10 text-3xl font-playfair leading-relaxed text-brand-ivory">
                         Grooming isn’t just routine. It’s a reset. A moment of clarity in a chaotic world.
@@ -36,10 +37,10 @@ const OurStoryPage = () => {
                         Every stroke, every drop, a commitment to self-mastery. We believe the morning ritual is the cornerstone of a disciplined life.
                     </p>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Section 2: Founder's Journey (Two Column) */}
-            <section className="grid grid-cols-1 md:grid-cols-2">
+            <Reveal delay={200} className="grid grid-cols-1 md:grid-cols-2">
                 {/* Image Column */}
                 <div className="relative h-[500px] md:h-[600px] lg:h-auto min-h-[500px] w-full bg-brand-black overflow-hidden border-b md:border-b-0 md:border-r border-brand-bronze/10">
                     <div
@@ -66,10 +67,10 @@ const OurStoryPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Section 2: The Vision (Staggered Layout) */}
-            <section className="grid grid-cols-1 md:grid-cols-2 bg-brand-black border-t border-brand-bronze/10">
+            <Reveal delay={200} className="grid grid-cols-1 md:grid-cols-2 bg-brand-black border-t border-brand-bronze/10">
                 {/* Copy Column (Left side) */}
                 <div className="flex flex-col justify-center p-12 md:p-24 border-b md:border-b-0 md:border-r border-brand-bronze/10 order-2 md:order-1">
                     <span className="mb-4 text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">02 / VISION</span>
@@ -91,7 +92,7 @@ const OurStoryPage = () => {
                         style={{ backgroundImage: `url(${oilBeakerImage})` }}
                     ></div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Section 3: Execution (Staggered Layout) */}
             <section className="grid grid-cols-1 md:grid-cols-2 bg-brand-black border-t border-brand-bronze/10">
@@ -124,7 +125,7 @@ const OurStoryPage = () => {
             </section>
 
             {/* Section 3: Discipline (Pull Quote) */}
-            <section className="bg-brand-black border-y border-brand-bronze/10 flex flex-col items-center justify-center px-8 py-32 text-center relative overflow-hidden">
+            <Reveal delay={200} className="bg-brand-black border-y border-brand-bronze/10 flex flex-col items-center justify-center px-8 py-32 text-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 text-[10rem] font-serif text-brand-bronze opacity-5 leading-none">“</div>
                 <div className="max-w-2xl relative z-10">
                     <h2 className="text-3xl font-playfair italic leading-loose text-brand-bronze md:text-3xl">
@@ -139,15 +140,17 @@ const OurStoryPage = () => {
                         <div className="h-[1px] w-16 bg-brand-bronze/30"></div>
                     </div>
                 </div>
-            </section>
+            </Reveal>
 
             {/* Section 4: The Bravo Standard (Grid) */}
             <section className="bg-brand-black py-32 container mx-auto px-4 max-w-6xl">
-                <div className="mb-24 text-center">
-                    <h3 className="tracking-[0.4em] text-sm font-bold uppercase text-brand-ivory font-julius">The Bravo Standard</h3>
-                    <div className="mt-6 h-[1px] w-12 bg-brand-bronze mx-auto"></div>
-                </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 border-t border-brand-bronze/10 pt-16">
+                <Reveal>
+                    <div className="mb-24 text-center">
+                        <h3 className="tracking-[0.4em] text-sm font-bold uppercase text-brand-ivory font-julius">The Bravo Standard</h3>
+                        <div className="mt-6 h-[1px] w-12 bg-brand-bronze mx-auto"></div>
+                    </div>
+                </Reveal>
+                <Reveal delay={200} className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 border-t border-brand-bronze/10 pt-16">
                     <div className="flex flex-col text-center space-y-6">
                         <div className="mx-auto w-16 h-16 border border-brand-bronze rounded-full flex items-center justify-center">
                             <div className="w-2 h-2 bg-brand-bronze rotate-45"></div>
@@ -176,7 +179,7 @@ const OurStoryPage = () => {
                         <h4 className="text-sm font-bold tracking-widest text-brand-bronze uppercase font-julius">Result</h4>
                         <p className="text-xs uppercase leading-relaxed tracking-widest text-brand-ivory/60 font-julius">A superior finish that lasts from the morning ritual to the midnight hour.</p>
                     </div>
-                </div>
+                </Reveal>
             </section>
 
             {/* Section 5: Closing */}
