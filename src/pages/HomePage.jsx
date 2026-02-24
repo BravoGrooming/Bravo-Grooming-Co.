@@ -193,19 +193,19 @@ const HomePage = () => {
                         {/* Testimonial 1 */}
                         <div className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all flex-1 min-w-[300px]">
                             <div className="flex text-brand-bronze text-sm">★★★★★</div>
-                            <p className="font-playfair italic opacity-90">"I’m picky with ingredients because my skin is super sensitive. No issues here. My beard looks fuller and feels softer, but the biggest change is the skin underneath. No redness, no flakes, nothing. My beard just feels healthier overall."</p>
+                            <p className="font-playfair italic opacity-90">"I’m picky with ingredients because my skin is really sensitive. No issues here. My beard looks fuller and feels softer, but the biggest change is the skin. No redness, no flakes, nothing. The formula feels like skincare with beard benefits, not the other way around."</p>
                             <p className="text-xs uppercase tracking-wider opacity-50">— Miguel A., 26 — Software Engineer</p>
                         </div>
                         {/* Testimonial 2 */}
                         <div className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all flex-1 min-w-[300px]">
                             <div className="flex text-brand-bronze text-sm">★★★★★</div>
-                            <p className="font-playfair italic opacity-90">"My beard is mostly grey now and gets wiry. This stuff actually tamed it without feeling like a balm. The hydration is noticeable. Took maybe three days for the rough patches to smooth out. I’ve used a lot of ‘premium’ oils over the years… this one earns the label."</p>
+                            <p className="font-playfair italic opacity-90">"My beard is mostly grey now and gets wiry. This stuff actually tamed it without feeling like a balm. The hydration is noticeable. Took maybe two days for the rough patches to smooth out. I’ve used a lot of ‘premium’ oils over the years… this one earns the label."</p>
                             <p className="text-xs uppercase tracking-wider opacity-50">— Terrence L., 54 — Small Business Owner</p>
                         </div>
                         {/* Testimonial 3 */}
                         <div className="bg-brand-ivory/5 p-8 max-w-md text-left space-y-4 border border-transparent hover:border-brand-bronze/30 transition-all flex-1 min-w-[300px]">
                             <div className="flex text-brand-bronze text-sm">★★★★★</div>
-                            <p className="font-playfair italic opacity-90">"I meet clients face-to-face all day, so looking put together matters. This oil makes my beard look controlled without looking like I tried too hard. The scent is classy and subtle, which is important to me. What stood out most was how much healthier the skin under my beard feels. My barber even asked what I've been using."</p>
+                            <p className="font-playfair italic opacity-90">"I meet clients face-to-face all day, so first impressions matters. This oil makes my beard look controlled without looking like I tried too hard. The scent is classy and subtle, which is important to me. What stood out most was how much healthier the skin under my beard feels. My barber even asked what I switched to."</p>
                             <p className="text-xs uppercase tracking-wider opacity-50">— Daniel K., 45 — Realtor</p>
                         </div>
                     </div>
