@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import heroVideo from '../assets/hero-video.mp4';
-import beardOil1 from '../assets/beard-oil-1.png';
+import beardOil1 from '../assets/bearded man 4.jpg'; // Updated the import path to the new luxury comb shot
+import bioactiveEdgeImg from '../assets/Product Image-Flatlay 1.png'; // Added blueprint flatlay
+import boardroomImg from '../assets/Bottle on gold ledge.jpeg'; // Added gold ledge bottle
 import Reveal from '../components/Reveal';
 
 const HomePage = () => {
@@ -56,8 +58,8 @@ const HomePage = () => {
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
                     <Reveal className="md:w-1/2 relative">
                         <div className="aspect-[4/3] bg-brand-bronze/5 w-full relative overflow-hidden">
-                            <img src={beardOil1} alt="Bioactive Science" className="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700 grayscale" />
-                            <div className="absolute inset-0 border border-brand-bronze/20 m-4"></div>
+                            <img src={beardOil1} alt="The Grooming Ritual" className="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:grayscale-0 transition-all duration-700 grayscale" />
+                            <div className="absolute inset-0 border border-brand-bronze/20 m-4 pointer-events-none"></div>
                         </div>
                     </Reveal>
                     <Reveal delay={200} className="md:w-1/2 space-y-6 text-center md:text-left">
@@ -140,16 +142,24 @@ const HomePage = () => {
             {/* 5. The Bioactive Edge */}
             <section className="py-32 bg-brand-black relative border-t border-brand-bronze/10">
                 <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="text-center mb-20 space-y-6 max-w-3xl mx-auto">
-                        <h2 className="text-4xl md:text-5xl font-playfair text-brand-ivory uppercase tracking-widest">
-                            The Bioactive <span className="text-brand-bronze">Edge</span>
-                        </h2>
-                        <div className="w-24 h-px bg-brand-bronze mx-auto opacity-60"></div>
-                        <p className="font-julius text-sm md:text-base leading-relaxed opacity-80 text-brand-ivory/80 uppercase tracking-widest text-brand-bronze mb-4">Precision Formulation. Clinical Results.</p>
-                        <p className="font-julius text-sm md:text-base leading-relaxed opacity-80 text-brand-ivory/80">
-                            Elite grooming is not a matter of trend; it is a matter of molecular discipline. While others rely on "scent-first" marketing, Bravo Grooming Co. prioritizes the Bioactive Edge—a formulation engineered to bridge the gap between cosmetic appearance and cellular health.<br /><br />
-                            Real results are not found in hype. They are found in the chemistry of the transition from skin to strand.
-                        </p>
+                    <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
+                        <div className="lg:w-1/2 space-y-6">
+                            <h2 className="text-4xl md:text-5xl font-playfair text-brand-ivory uppercase tracking-widest">
+                                The Bioactive <span className="text-brand-bronze">Edge</span>
+                            </h2>
+                            <div className="w-24 h-px bg-brand-bronze opacity-60"></div>
+                            <p className="font-julius text-sm md:text-base leading-relaxed opacity-80 text-brand-bronze mb-4 uppercase tracking-widest">Precision Formulation. Clinical Results.</p>
+                            <p className="font-julius text-sm md:text-base leading-relaxed opacity-80 text-brand-ivory/80">
+                                Elite grooming is not a matter of trend; it is a matter of molecular discipline. While others rely on "scent-first" marketing, Bravo Grooming Co. prioritizes the Bioactive Edge—a formulation engineered to bridge the gap between cosmetic appearance and cellular health.<br /><br />
+                                Real results are not found in hype. They are found in the chemistry of the transition from skin to strand.
+                            </p>
+                        </div>
+                        <Reveal className="lg:w-1/2 relative">
+                            <div className="aspect-square bg-brand-bronze/5 w-full relative overflow-hidden">
+                                <img src={bioactiveEdgeImg} alt="Technical Blueprint Formula" className="object-cover w-full h-full opacity-90 mix-blend-luminosity hover:mix-blend-normal hover:grayscale-0 transition-all duration-700 grayscale" />
+                                <div className="absolute inset-0 border border-brand-bronze/20 m-4 pointer-events-none"></div>
+                            </div>
+                        </Reveal>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-12">
@@ -217,15 +227,19 @@ const HomePage = () => {
             </section>
 
             {/* 7. Email Capture */}
-            <section className="py-32 bg-brand-black text-center">
-                <div className="container mx-auto px-4 max-w-2xl">
+            <section className="py-32 bg-brand-black relative flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <img src={boardroomImg} alt="Bravo Boardroom Luxury" className="object-cover w-full h-full opacity-20 object-top" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-brand-black/40"></div>
+                </div>
+                <div className="container mx-auto px-4 max-w-2xl relative z-10 text-center">
                     <h2 className="text-5xl font-playfair mb-6">Join The <span className="text-brand-bronze">Bravo Boardroom</span></h2>
-                    <p className="text-lg opacity-60 mb-12 font-julius">Join the Bravo Boardroom to unlock premium updates, limited-time opportunities, and elevated pricing benefits available only to our members.</p>
-                    <form className="flex flex-col md:flex-row gap-0 max-w-md mx-auto relative">
+                    <p className="text-lg opacity-80 mb-12 font-julius text-brand-ivory">Join the Bravo Boardroom to unlock premium updates, limited-time opportunities, and elevated pricing benefits available only to our members.</p>
+                    <form className="flex flex-col md:flex-row gap-0 max-w-lg mx-auto relative group">
                         <input
                             type="email"
                             placeholder="EMAIL ADDRESS"
-                            className="w-full bg-transparent border-b border-brand-bronze py-4 text-brand-ivory placeholder-brand-ivory/30 focus:outline-none font-julius text-center md:text-left"
+                            className="w-full bg-transparent border-b border-brand-bronze/50 py-4 text-brand-ivory placeholder-brand-ivory/60 focus:outline-none focus:border-brand-bronze font-julius text-center md:text-left transition-colors"
                         />
                         <button type="submit" className="mt-8 md:mt-0 md:absolute md:right-0 md:bottom-4 text-brand-bronze uppercase tracking-widest text-xs hover:text-brand-ivory transition-colors">
                             Subscribe

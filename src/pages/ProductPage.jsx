@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import client from '../lib/shopify';
 import heroImage from '../assets/beard-oil-hero.png';
-import textureImage from '../assets/beard-oil-2.png';
+import textureImage from '../assets/Bottle on ledge.jpeg'; // Executive bottle shot
+import detailImage from '../assets/Product image-Ingredient 2.png'; // High end botanical shot
 import ProductAccordions from '../components/ProductAccordions';
 import ExpertSocialProof from '../components/ExpertSocialProof';
 import Reveal from '../components/Reveal';
@@ -63,22 +64,22 @@ const ProductPage = () => {
                     <div className="grid grid-cols-3 gap-2">
                         {/* Gallery Thumbs */}
                         <img
-                            src={product.images[0]?.src || heroImage}
-                            onClick={() => setActiveImage(product.images[0]?.src || heroImage)}
-                            alt="Detail 1"
-                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === (product.images[0]?.src || heroImage) ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
+                            src={product?.images?.[0]?.src || heroImage}
+                            onClick={() => setActiveImage(product?.images?.[0]?.src || heroImage)}
+                            alt="Front View"
+                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === (product?.images?.[0]?.src || heroImage) ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
                         />
                         <img
                             src={textureImage}
                             onClick={() => setActiveImage(textureImage)}
-                            alt="Texture Shot"
+                            alt="Bottle View"
                             className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === textureImage ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
                         />
                         <img
-                            src={product.images[1]?.src || heroImage}
-                            onClick={() => setActiveImage(product.images[1]?.src || heroImage)}
-                            alt="Detail 3"
-                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === (product.images[1]?.src || heroImage) ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
+                            src={detailImage}
+                            onClick={() => setActiveImage(detailImage)}
+                            alt="Botanical Ingredients"
+                            className={`w-full h-32 object-cover cursor-pointer border transition-all ${activeImage === detailImage ? 'border-brand-bronze opacity-100' : 'border-transparent opacity-70 hover:opacity-100 hover:border-brand-bronze/50'}`}
                         />
                     </div>
                 </div>
