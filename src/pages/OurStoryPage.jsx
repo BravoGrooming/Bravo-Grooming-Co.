@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import founderImage from '../assets/founder-portrait.png';
 import oilBeakerImage from '../assets/oil-in-beaker.png';
+import executionImage from '../assets/Product image-Ingredient 2.png';
 import Reveal from '../components/Reveal';
 
 const OurStoryPage = () => {
@@ -16,7 +17,7 @@ const OurStoryPage = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-transparent to-brand-black"></div>
                 </div>
                 <div className="relative z-10 flex flex-col items-center text-center px-6">
-                    <h1 className="tracking-[0.3em] text-4xl font-playfair uppercase leading-none md:text-6xl text-brand-ivory">
+                    <h1 className="mb-8">
                         Our Story
                     </h1>
                     <div className="mt-8 h-[1px] w-12 bg-brand-bronze mx-auto"></div>
@@ -29,7 +30,7 @@ const OurStoryPage = () => {
             {/* Section 1: Philosophy */}
             <Reveal className="flex flex-col items-center px-8 py-32 text-center border-y border-brand-bronze/10">
                 <div className="max-w-xl">
-                    <h2 className="tracking-wide mb-10 text-3xl font-playfair leading-relaxed text-brand-ivory">
+                    <h2 className="mb-10">
                         Grooming isn’t just routine. It’s a reset. A moment of clarity in a chaotic world.
                     </h2>
                     <div className="mx-auto mb-10 h-[1px] w-12 bg-brand-bronze"></div>
@@ -51,7 +52,7 @@ const OurStoryPage = () => {
                 {/* Copy Column */}
                 <div className="flex flex-col justify-center bg-brand-black p-12 md:p-24 border-l border-brand-bronze/10">
                     <span className="mb-4 text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">01 / ORIGIN</span>
-                    <h3 className="mb-12 text-4xl font-playfair uppercase tracking-widest text-brand-ivory">The Foundation</h3>
+                    <h3 className="mb-12">The Foundation</h3>
                     <div className="space-y-8">
                         <div className="flex gap-6 items-start">
                             <span className="mt-2 h-2 w-2 flex-shrink-0 bg-brand-bronze rotate-45"></span>
@@ -74,7 +75,7 @@ const OurStoryPage = () => {
                 {/* Copy Column (Left side) */}
                 <div className="flex flex-col justify-center p-12 md:p-24 border-b md:border-b-0 md:border-r border-brand-bronze/10 order-2 md:order-1">
                     <span className="mb-4 text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">02 / VISION</span>
-                    <h3 className="mb-12 text-3xl font-playfair uppercase tracking-widest text-brand-ivory">The Vision</h3>
+                    <h3 className="mb-12">The Vision</h3>
                     <div className="space-y-8">
                         <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
                             Our vision is direct — elevate men’s grooming to a level worthy of the men who refuse to cut corners. We create products that match the standards of those who take pride in how they present themselves: premium formulations, purposeful ingredients, and a philosophy rooted in discipline rather than trends.
@@ -99,15 +100,14 @@ const OurStoryPage = () => {
                 {/* Image Column (Left side) */}
                 <div className="relative h-[500px] md:h-[600px] lg:h-auto min-h-[500px] w-full overflow-hidden border-b md:border-b-0 md:border-r border-brand-bronze/10">
                     <div
-                        className="h-full w-full bg-neutral-900 flex items-center justify-center opacity-80"
-                    >
-                        <span className="text-brand-ivory/20 font-julius tracking-widest text-xs uppercase px-8 text-center border border-brand-ivory/10 py-4 rounded">Placeholder for Execution Image</span>
-                    </div>
+                        className="h-full w-full bg-cover bg-center opacity-90 transition-transform duration-700 hover:scale-105"
+                        style={{ backgroundImage: `url(${executionImage})` }}
+                    ></div>
                 </div>
                 {/* Copy Column (Right side) */}
                 <div className="flex flex-col justify-center p-12 md:p-24">
                     <span className="mb-4 text-xs font-bold tracking-[0.5em] text-brand-bronze font-julius">03 / EXECUTION</span>
-                    <h3 className="mb-12 text-3xl font-playfair uppercase tracking-widest text-brand-ivory">Execution</h3>
+                    <h3 className="mb-12">Execution</h3>
                     <div className="space-y-8">
                         <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80">
                             A vision means nothing without disciplined follow-through. Execution is where Bravo separates itself: no gimmicks, no filler ingredients, no shortcuts — just uncompromising craftsmanship engineered to perform.
@@ -128,7 +128,7 @@ const OurStoryPage = () => {
             <Reveal delay={200} className="bg-brand-black border-y border-brand-bronze/10 flex flex-col items-center justify-center px-8 py-32 text-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 text-[10rem] font-serif text-brand-bronze opacity-5 leading-none">“</div>
                 <div className="max-w-2xl relative z-10">
-                    <h2 className="text-3xl font-playfair italic leading-loose text-brand-bronze md:text-3xl">
+                    <h2 className="mb-12 italic leading-loose">
                         "Precision matters. Integrity matters. Consistency matters. That’s why we craft without shortcuts, hype, or empty marketing."
                     </h2>
                     <p className="text-sm font-julius leading-relaxed tracking-wider text-brand-ivory/80 mt-12 mb-16">
@@ -146,7 +146,7 @@ const OurStoryPage = () => {
             <section className="bg-brand-black py-32 container mx-auto px-4 max-w-6xl">
                 <Reveal>
                     <div className="mb-24 text-center">
-                        <h3 className="tracking-[0.4em] text-sm font-bold uppercase text-brand-ivory font-julius">The Bravo Standard</h3>
+                        <h3 className="mb-4 text-center">The Bravo Standard</h3>
                         <div className="mt-6 h-[1px] w-12 bg-brand-bronze mx-auto"></div>
                     </div>
                 </Reveal>
@@ -185,7 +185,7 @@ const OurStoryPage = () => {
             {/* Section 5: Closing */}
             <section className="flex flex-col items-center bg-brand-black px-8 py-32 text-center border-t border-brand-bronze/10">
                 <div className="max-w-[400px]">
-                    <h2 className="tracking-widest mb-8 text-3xl font-playfair uppercase text-brand-ivory">Welcome to <br />Bravo Grooming Co.</h2>
+                    <h2 className="mb-8">Welcome to <br />Bravo Grooming Co.</h2>
                     <p className="text-sm uppercase leading-loose tracking-[0.3em] font-julius text-brand-bronze">
                         The ritual begins with you.
                     </p>

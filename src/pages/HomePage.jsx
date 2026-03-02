@@ -39,7 +39,7 @@ const HomePage = () => {
                 {/* Content */}
                 <Reveal delay={200} className="relative z-10 text-center max-w-4xl px-4 space-y-8 mt-20">
                     <p className="text-brand-bronze tracking-[0.3em] font-julius text-sm uppercase">Precision-Crafted. Results-Driven.</p>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair text-brand-ivory leading-none tracking-widest drop-shadow-lg uppercase">
+                    <h1 className="mb-8">
                         Premium Grooming <br />
                         <span className="text-2xl md:text-4xl italic lowercase tracking-normal font-serif text-brand-bronze block mt-2">for the</span>
                         Modern Professional
@@ -57,13 +57,13 @@ const HomePage = () => {
             <section className="py-24 bg-brand-black border-y border-brand-bronze/10 overflow-hidden">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
                     <Reveal className="md:w-1/2 relative">
-                        <div className="aspect-[4/3] bg-brand-bronze/5 w-full relative overflow-hidden">
-                            <img src={beardOil1} alt="The Grooming Ritual" className="object-cover w-full h-full opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:grayscale-0 transition-all duration-700 grayscale" />
-                            <div className="absolute inset-0 border border-brand-bronze/20 m-4 pointer-events-none"></div>
+                        <div className="aspect-[4/3] bg-brand-bronze/5 w-full relative overflow-hidden rounded-sm">
+                            <img src={beardOil1} alt="The Grooming Ritual" className="object-cover w-full h-full opacity-90 transition-all duration-700" />
+                            <div className="absolute inset-0 border border-brand-bronze/20 m-4 pointer-events-none rounded-sm"></div>
                         </div>
                     </Reveal>
                     <Reveal delay={200} className="md:w-1/2 space-y-6 text-center md:text-left">
-                        <h2 className="text-4xl font-playfair text-brand-ivory">Forged Through Discipline. <br /><span className="text-brand-bronze">Elevated With Purpose.</span></h2>
+                        <h2 className="mb-6">Forged Through Discipline. <br /><span className="text-brand-bronze">Elevated With Purpose.</span></h2>
                         <p className="text-lg opacity-80 leading-relaxed font-julius max-w-lg">
                             We don’t follow the industry — we refine it. Bravo was built on discipline, consistency, and a commitment to doing things the right way, not the easy way. Every bottle of our Bioactive Beard Oil reflects that standard. No filler. No compromises. Only proven, high-performance ingredients designed for men who expect real results. This is grooming with purpose — crafted for the professional who holds himself to a higher code.
                         </p>
@@ -87,7 +87,7 @@ const HomePage = () => {
                             <div className="w-16 h-16 mx-auto border border-brand-bronze rounded-full flex items-center justify-center group-hover:bg-brand-bronze/10 transition-colors">
                                 <div className="w-2 h-2 bg-brand-bronze rotate-45"></div>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory">{item.title}</h3>
+                            <h3 className="mb-4">{item.title}</h3>
                             <p className="text-sm opacity-60 max-w-xs mx-auto">{item.desc}</p>
                         </Reveal>
                     ))}
@@ -98,14 +98,14 @@ const HomePage = () => {
             <section className="py-32 bg-brand-black relative">
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-bronze/30 to-transparent"></div>
                 <div className="container mx-auto px-4 max-w-6xl">
-                    <h2 className="text-4xl md:text-5xl text-center font-playfair mb-24 text-brand-ivory uppercase tracking-widest">
+                    <h2 className="text-center mb-24">
                         Precision in <span className="text-brand-bronze">Every Drop</span>
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-16 md:gap-12 md:divide-x md:divide-brand-bronze/20">
                         {/* Column 1 */}
                         <div className="space-y-8 px-4 text-center">
-                            <h3 className="text-2xl font-playfair text-brand-bronze uppercase tracking-wide">Nourish + Strengthen</h3>
+                            <h3 className="mb-6">Nourish + Strengthen</h3>
 
                             <ul className="space-y-4 text-sm font-julius uppercase tracking-wider text-brand-ivory/90">
                                 {uniqueC1.map((ingredient, idx) => (
@@ -116,7 +116,7 @@ const HomePage = () => {
 
                         {/* Column 2 */}
                         <div className="space-y-8 px-4 text-center">
-                            <h3 className="text-2xl font-playfair text-brand-bronze uppercase tracking-wide">Restore + Regenerative</h3>
+                            <h3 className="mb-6">Restore + Regenerative</h3>
 
                             <ul className="space-y-4 text-sm font-julius uppercase tracking-wider text-brand-ivory/90">
                                 {uniqueC2.map((ingredient, idx) => (
@@ -127,7 +127,7 @@ const HomePage = () => {
 
                         {/* Column 3 */}
                         <div className="space-y-8 px-4 text-center">
-                            <h3 className="text-2xl font-playfair text-brand-bronze uppercase tracking-wide">Protect + Condition</h3>
+                            <h3 className="mb-6">Protect + Condition</h3>
 
                             <ul className="space-y-4 text-sm font-julius uppercase tracking-wider text-brand-ivory/90">
                                 {uniqueC3.map((ingredient, idx) => (
@@ -144,7 +144,7 @@ const HomePage = () => {
                 <div className="container mx-auto px-4 max-w-6xl">
                     <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
                         <div className="lg:w-1/2 space-y-6">
-                            <h2 className="text-4xl md:text-5xl font-playfair text-brand-ivory uppercase tracking-widest">
+                            <h2 className="mb-6">
                                 The Bioactive <span className="text-brand-bronze">Edge</span>
                             </h2>
                             <div className="w-24 h-px bg-brand-bronze opacity-60"></div>
@@ -168,9 +168,9 @@ const HomePage = () => {
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">01</span>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide uppercase">INTEGRITY OF THE SKIN-BEARD BARRIER</h3>
-                            <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                A beard is only as formidable as the foundation that supports it. Our bioactive compounds are selected for their ability to penetrate the epidermal layer, reinforcing the skin-beard barrier. We don’t just coat the hair; we rebuild and restore the environment where growth begins.
+                            <h3 className="mb-4">Targets the Skin–Beard Barrier</h3>
+                            <p className="font-julius text-sm leading-relaxed opacity-70 group-hover:opacity-90 transition-opacity duration-500">
+                                Strengthens the foundation beneath your beard to reduce irritation and improve structural integrity.
                             </p>
                         </Reveal>
 
@@ -179,9 +179,9 @@ const HomePage = () => {
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">02</span>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide uppercase">QUANTIFIABLE STRUCTURAL ADVANCEMENT</h3>
-                            <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                We have moved beyond "cosmetic shine." Our Bioactive Beard Oil is designed for measurable resilience. By targeting the lipid structure of the follicle, the formula enhances fiber density, maximizes natural softness, and significantly reduces structural breakage.
+                            <h3 className="mb-4">Drives Measurable Improvement</h3>
+                            <p className="font-julius text-sm leading-relaxed opacity-70 group-hover:opacity-90 transition-opacity duration-500">
+                                Enhances resilience, softness, and density — not just surface shine.
                             </p>
                         </Reveal>
 
@@ -190,9 +190,9 @@ const HomePage = () => {
                             <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                 <span className="font-playfair text-4xl text-brand-bronze italic">03</span>
                             </div>
-                            <h3 className="text-xl font-playfair text-brand-ivory mb-4 tracking-wide uppercase">PROFESSIONAL KINETIC PERFORMANCE</h3>
-                            <p className="font-julius text-xs leading-relaxed opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                True luxury is frictionless. Engineered for the man whose time is a finite resource, our oil is lightweight and instantly absorbed. It provides a clean, matte-satin finish that integrates into a high-performance routine without residue or hesitation.
+                            <h3 className="mb-4">Engineered for Daily Performance</h3>
+                            <p className="font-julius text-sm leading-relaxed opacity-70 group-hover:opacity-90 transition-opacity duration-500">
+                                Lightweight, fast-absorbing, and built for disciplined, professional use.
                             </p>
                         </Reveal>
                     </div>
@@ -201,7 +201,7 @@ const HomePage = () => {
 
             {/* 6. Social Proof Wall */}
             <section className="py-32 container mx-auto px-4 text-center overflow-hidden">
-                <h2 className="text-xs uppercase tracking-[0.4em] text-brand-bronze mb-16">Proven by the Pursuit of Excellence</h2>
+                <h2 className="text-xs tracking-[0.4em] text-brand-bronze mb-16 text-center">Proven by the Pursuit of Excellence</h2>
                 <div className="relative">
                     <div className="flex gap-8 justify-center flex-wrap">
                         {/* Testimonial 1 */}
@@ -233,18 +233,11 @@ const HomePage = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-brand-black/40"></div>
                 </div>
                 <div className="container mx-auto px-4 max-w-2xl relative z-10 text-center">
-                    <h2 className="text-5xl font-playfair mb-6">Join The <span className="text-brand-bronze">Bravo Boardroom</span></h2>
+                    <h2 className="mb-6">Join The <span className="text-brand-bronze">Bravo Boardroom</span></h2>
                     <p className="text-lg opacity-80 mb-12 font-julius text-brand-ivory">Join the Bravo Boardroom to unlock premium updates, limited-time opportunities, and elevated pricing benefits available only to our members.</p>
-                    <form className="flex flex-col md:flex-row gap-0 max-w-lg mx-auto relative group">
-                        <input
-                            type="email"
-                            placeholder="EMAIL ADDRESS"
-                            className="w-full bg-transparent border-b border-brand-bronze/50 py-4 text-brand-ivory placeholder-brand-ivory/60 focus:outline-none focus:border-brand-bronze font-julius text-center md:text-left transition-colors"
-                        />
-                        <button type="submit" className="mt-8 md:mt-0 md:absolute md:right-0 md:bottom-4 text-brand-bronze uppercase tracking-widest text-xs hover:text-brand-ivory transition-colors">
-                            Subscribe
-                        </button>
-                    </form>
+                    <div className="w-full max-w-lg mx-auto">
+                        <div className="klaviyo-form-XJgtWK"></div>
+                    </div>
                 </div>
             </section>
 

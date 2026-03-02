@@ -27,17 +27,8 @@ const ProductPage3 = () => {
 
                 {/* Sign-Up Bar */}
                 <section className="mb-24">
-                    <div className="flex flex-col space-y-3">
-                        <div className="relative">
-                            <input
-                                className="w-full bg-transparent border border-primary/40 rounded text-brand-ivory font-sans placeholder:text-brand-ivory/30 py-4 px-4 focus:border-primary focus:ring-0 transition-colors"
-                                placeholder="Enter your email"
-                                type="email"
-                            />
-                        </div>
-                        <button className="w-full bg-brand-black text-primary border border-primary font-sans font-bold py-4 rounded uppercase tracking-widest text-sm hover:bg-brand-black/80 hover:shadow-[0_0_15px_rgba(189,152,101,0.3)] transition-all active:scale-[0.98]">
-                            Sign Up
-                        </button>
+                    <div className="w-full max-w-lg mx-auto">
+                        <div className="klaviyo-form-XJgtWK"></div>
                     </div>
                 </section>
 

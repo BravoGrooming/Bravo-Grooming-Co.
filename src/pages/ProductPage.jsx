@@ -86,7 +86,7 @@ const ProductPage = () => {
 
                 <div className="space-y-8">
                     <div className="border-l border-brand-bronze pl-6">
-                        <h1 className="text-5xl font-playfair text-brand-ivory mb-2">{product.title}</h1>
+                        <h1 className="mb-2">{product.title}</h1>
                         <p className="text-brand-bronze font-julius text-xl tracking-widest">
                             ${product.variants[0]?.price.amount} {product.variants[0]?.price.currencyCode}
                         </p>
@@ -123,7 +123,7 @@ const ProductPage = () => {
             <Reveal delay={200} className="bg-brand-ivory/5 p-12 md:p-24 text-center border border-brand-bronze/10 relative overflow-hidden">
                 <div className="absolute top-0 left-0 text-[10rem] font-serif text-brand-bronze opacity-5 leading-none">“</div>
                 <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-                    <h2 className="text-3xl font-playfair uppercase tracking-widest text-brand-bronze">Uncompromised Standards</h2>
+                    <h2 className="mb-8">Uncompromised Standards</h2>
                     <p className="font-julius text-lg leading-loose opacity-80">
                         "I built this oil from the ground up because settling wasn’t an option. Bravo is crafted for the man who understands that real quality is earned through intention, effort, and discipline — every single day."
                     </p>
@@ -143,7 +143,7 @@ const ProductPage = () => {
                 </div>
                 <div className="flex items-center justify-center p-12 bg-brand-black">
                     <div className="space-y-6 max-w-md">
-                        <h3 className="text-3xl font-playfair text-brand-ivory">Clean. Controlled. Professional.</h3>
+                        <h3 className="mb-6">Clean. Controlled. Professional.</h3>
                         <div className="w-12 h-1 bg-brand-bronze"></div>
                         <p className="font-julius leading-relaxed opacity-70">
                             Engineered for a weightless, disciplined finish. Our bioactive blend absorbs instantly, conditioning the beard and skin without shine, residue, or heaviness. The result: a clean, refined look built for the modern professional.

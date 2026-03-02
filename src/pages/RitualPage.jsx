@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, FlaskConical, ShieldCheck, Award } from 'lucide-react';
 import Reveal from '../components/Reveal';
+import heroBg from '../assets/Bottle on ledge.jpeg';
+import formulaImg from '../assets/science-hero.png';
+import ritualImg from '../assets/bearded man 4.jpg';
+import presenceImg from '../assets/Bottle on gold ledge.jpeg';
+import masteryImg from '../assets/Product Image-Flatlay 1.png';
+import labImg from '../assets/oil-in-beaker.png';
 
 const RitualPage = () => {
     return (
@@ -10,8 +16,8 @@ const RitualPage = () => {
             <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
                 {/* Background Image with Parallax effect */}
                 <div className="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1542382156-df53350ca9e1?q=80&w=2670&auto=format&fit=crop" alt="Luxury grooming lifestyle" className="w-full h-full object-cover opacity-30 scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-brand-black/30 to-brand-black/90"></div>
+                    <img src={heroBg} alt="Luxury grooming lifestyle" className="w-full h-full object-cover opacity-60 scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-brand-black/20 to-brand-black/90"></div>
                 </div>
 
                 {/* Hero Content */}
@@ -23,9 +29,9 @@ const RitualPage = () => {
                             </p>
                         </Reveal>
                         <Reveal delay={400}>
-                            <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl text-brand-ivory leading-tight mb-8">
+                            <h1 className="mb-8">
                                 Built from struggle.<br />
-                                <span className="text-brand-bronze">Refined with purpose.</span>
+                                <span className="text-brand-bronze italic font-serif text-[0.8em] capitalize tracking-normal leading-normal">Refined with purpose.</span>
                             </h1>
                         </Reveal>
                         <Reveal delay={600}>
@@ -63,9 +69,9 @@ const RitualPage = () => {
                         {/* Product Image */}
                         <div className="relative order-2 lg:order-1">
                             <Reveal>
-                                <div className="aspect-[4/5] relative overflow-hidden border border-brand-bronze/30">
-                                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop" alt="Bioactive Beard Oil" className="w-full h-full object-cover grayscale-[30%]" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent"></div>
+                                <div className="aspect-[4/5] relative overflow-hidden border border-brand-bronze/30 rounded-sm">
+                                    <img src={formulaImg} alt="Bioactive Beard Oil" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent"></div>
                                 </div>
                             </Reveal>
                             <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-brand-bronze/30 hidden lg:block"></div>
@@ -78,7 +84,7 @@ const RitualPage = () => {
                                 <p className="text-brand-bronze text-sm tracking-[0.3em] uppercase mb-4 font-bold">The Standard</p>
                             </Reveal>
                             <Reveal delay={200}>
-                                <h2 className="font-playfair text-4xl md:text-5xl text-brand-ivory mb-6">
+                                <h2 className="mb-6">
                                     Bioactive Beard Oil
                                 </h2>
                             </Reveal>
@@ -131,7 +137,7 @@ const RitualPage = () => {
                         <p className="text-brand-bronze text-sm tracking-[0.3em] uppercase mb-6 font-bold">The Experience</p>
                     </Reveal>
                     <Reveal delay={200}>
-                        <h2 className="font-playfair text-4xl md:text-6xl text-brand-ivory mb-8 leading-tight">
+                        <h2 className="mb-8">
                             Precision skincare meets<br />uncompromising discipline
                         </h2>
                     </Reveal>
@@ -175,42 +181,42 @@ const RitualPage = () => {
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* Card 1 */}
                         <Reveal delay={100}>
-                            <div className="group relative overflow-hidden border border-brand-bronze/20 transition-all hover:border-brand-bronze">
+                            <div className="group relative overflow-hidden border border-brand-bronze/20 transition-all hover:border-brand-bronze rounded-sm">
                                 <div className="aspect-[3/4] overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1507682520764-93453a69b605?q=80&w=800&auto=format&fit=crop" alt="Professional grooming" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[40%]" />
+                                    <img src={ritualImg} alt="Professional grooming" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale" />
                                 </div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 p-8">
                                     <p className="text-brand-bronze text-xs tracking-[0.3em] uppercase mb-3 font-bold">Discipline</p>
-                                    <h3 className="font-playfair text-2xl text-brand-ivory">The Morning Ritual</h3>
+                                    <h3>The Morning Ritual</h3>
                                 </div>
                             </div>
                         </Reveal>
 
                         {/* Card 2 */}
                         <Reveal delay={300}>
-                            <div className="group relative overflow-hidden border border-brand-bronze/20 transition-all hover:border-brand-bronze">
+                            <div className="group relative overflow-hidden border border-brand-bronze/20 transition-all hover:border-brand-bronze rounded-sm">
                                 <div className="aspect-[3/4] overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop" alt="Executive presence" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[40%]" />
+                                    <img src={presenceImg} alt="Executive presence" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                 </div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 p-8">
                                     <p className="text-brand-bronze text-xs tracking-[0.3em] uppercase mb-3 font-bold">Presence</p>
-                                    <h3 className="font-playfair text-2xl text-brand-ivory">Executive Standard</h3>
+                                    <h3>Executive Standard</h3>
                                 </div>
                             </div>
                         </Reveal>
 
                         {/* Card 3 */}
                         <Reveal delay={500}>
-                            <div className="group relative overflow-hidden border border-brand-bronze/20 transition-all hover:border-brand-bronze">
+                            <div className="group relative overflow-hidden border border-brand-bronze/20 transition-all hover:border-brand-bronze rounded-sm">
                                 <div className="aspect-[3/4] overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?q=80&w=800&auto=format&fit=crop" alt="Precision grooming" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[40%]" />
+                                    <img src={masteryImg} alt="Precision grooming" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                 </div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/40 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 p-8">
                                     <p className="text-brand-bronze text-xs tracking-[0.3em] uppercase mb-3 font-bold">Mastery</p>
-                                    <h3 className="font-playfair text-2xl text-brand-ivory">The Details Define</h3>
+                                    <h3>The Details Define</h3>
                                 </div>
                             </div>
                         </Reveal>
@@ -227,7 +233,7 @@ const RitualPage = () => {
                                 <p className="text-brand-bronze text-sm tracking-[0.3em] uppercase mb-6 font-bold">Formulation Excellence</p>
                             </Reveal>
                             <Reveal delay={200}>
-                                <h2 className="font-playfair text-4xl md:text-5xl text-brand-ivory mb-12">
+                                <h2 className="mb-12">
                                     Transparency is power.<br />Knowledge is luxury.
                                 </h2>
                             </Reveal>
@@ -270,8 +276,9 @@ const RitualPage = () => {
 
                         <div className="relative mt-8 lg:mt-0 lg:pl-12 pl-0">
                             <Reveal>
-                                <div className="aspect-square border border-brand-bronze/30 p-4 md:p-8">
-                                    <img src="https://images.unsplash.com/photo-1544365518-da14b14ac3c5?q=80&w=800&auto=format&fit=crop" alt="Laboratory precision" className="w-full h-full object-cover grayscale-[20%]" />
+                                <div className="aspect-square border border-brand-bronze/30 p-4 md:p-8 relative rounded-sm">
+                                    <div className="absolute inset-0 bg-brand-black/20 z-10 rounded-sm"></div>
+                                    <img src={labImg} alt="Laboratory precision" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105 rounded-sm" />
                                 </div>
                             </Reveal>
                             <Reveal delay={500}>
@@ -290,7 +297,7 @@ const RitualPage = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-bronze/10 via-brand-black to-brand-black opacity-80"></div>
                 <div className="max-w-4xl mx-auto text-center relative z-10 container">
                     <Reveal>
-                        <h2 className="font-playfair text-5xl md:text-7xl text-brand-ivory mb-10 leading-tight">
+                        <h2 className="mb-10 text-center">
                             Experience the<br />
                             <span className="text-brand-gradient">Bioactive Standard</span>
                         </h2>

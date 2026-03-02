@@ -20,9 +20,18 @@
     @apply bg-brand-black text-brand-ivory font-julius antialiased;
   }
 
-  h1,
-  h2,
-  h3,
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-playfair text-brand-ivory uppercase tracking-widest leading-none drop-shadow-[0_4px_4px_rgba(0, 0, 0, 0.5)];
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-playfair text-brand-ivory uppercase tracking-widest leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-playfair text-brand-bronze uppercase tracking-wide leading-snug;
+  }
+
   h4,
   h5,
   h6 {
@@ -34,6 +43,7 @@
   .text-brand-gradient {
     background: linear-gradient(to right, #BD9865, #FDF4E9);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
